@@ -35,7 +35,7 @@
       "single-room": {
         "name": "Single room",
         "description": "Room with a single bed",
-        "totalQuantity": 20,
+        "totalQuantity": 8,
         "occupancy": {
           "min": 1,
           "max": 1
