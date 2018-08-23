@@ -1,0 +1,184 @@
+{
+  "description": {
+    "name": "Guest House One Eyed Badger",
+    "description": "Small, private guest house in the quiet part of Dragolm. No kids, no pets. Smokers are welcome.",
+    "location": {
+      "latitude": 46.4528031,
+      "longitude": 23.5229753
+    },
+    "contacts": {
+      "general": {
+        "email": "astorius.grumpstein@one-eyed-badger.com",
+        "phone": "004057666711",
+        "url": "https://one-eyed-badger.com"
+      }
+    },
+    "address": {
+      "line1": "Oak street 77",
+      "line2": "",
+      "postalCode": "33313",
+      "city": "Dragolm",
+      "country": "RO"
+    },
+    "timezone": "Europe/Bucharest",
+    "currency": "RON",
+    "amenities": [
+       "lounge",
+       "fireplace",
+       "bar"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/tree/png/tree--gradient-on-white.png",
+      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/full-logo/png/logo--black-on-green.png"
+    ],
+    "roomTypes": {
+      "single-room": {
+        "name": "Single room",
+        "description": "Room with a single bed",
+        "totalQuantity": 20,
+        "occupancy": {
+          "min": 1,
+          "max": 1
+        },
+        "amenities": [
+          "ashtray",
+          "minibar",
+          "TV"
+        ],
+        "images": [
+          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+        ],
+        "properties": {
+          "nonSmoking": "none"
+        }
+      },
+      "twin-bed": {
+        "name": "Twin bed",
+        "description": "Room with a twin bed",
+        "totalQuantity": 4,
+        "occupancy": {
+          "min": 2,
+          "max": 2
+        },
+        "amenities": [
+          "ashtray",
+          "minibar",
+          "TV"
+        ],
+        "images": [
+          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+        ],
+        "properties": {
+          "nonSmoking": "none"
+        }
+      },
+      "extra-view": {
+        "name": "Extra view",
+        "description": "Room with a balcony and an extra view of the Dragolm mountains (single bed only)",
+        "totalQuantity": 2,
+        "occupancy": {
+          "min": 1,
+          "max": 1
+        },
+        "amenities": [
+          "ashtray",
+          "minibar",
+          "TV",
+          "balcony",
+          "roof light"
+        ],
+        "images": [
+          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+        ],
+        "properties": {
+          "nonSmoking": "none"
+        }
+      }
+    },
+    "cancellationPolicies": [
+      {
+        "from": "2018-01-01",
+        "to": "2018-12-31",
+        "deadline": 30,
+        "amount": 30
+      },
+      {
+        "from": "2018-01-01",
+        "to": "2018-12-31",
+        "deadline": 7,
+        "amount": 60
+      }
+    ]
+  },
+  "ratePlans": {
+    "single-room": {
+      "name": "Single room",
+      "description": "Price for a standard single room.",
+      "currency": "RON",
+      "price": 184,
+      "roomTypeIds": ["single-room"],
+      "availableForReservation": {
+        "from": "2018-01-01",
+        "to": "2018-12-31"
+      },
+      "availableForTravel": {
+        "from": "2018-10-31",
+        "to": "2018-12-31"
+      },
+      "modifiers": [
+        {
+          "adjustment": -30,
+          "conditions": {
+            "minLengthOfStay": 30
+          }
+        }
+      ]
+    },
+    "twin-bed": {
+      "name": "Twin bed",
+      "description": "Price for a twin bed room.",
+      "currency": "RON",
+      "price": 244,
+      "roomTypeIds": ["twin-bed"],
+      "availableForReservation": {
+        "from": "2018-01-01",
+        "to": "2018-12-31"
+      },
+      "availableForTravel": {
+        "from": "2018-10-31",
+        "to": "2018-12-31"
+      },
+      "modifiers": [
+        {
+          "adjustment": -30,
+          "conditions": {
+            "minLengthOfStay": 30
+          }
+        }
+      ]
+    },
+    "extra-view": {
+      "name": "Extra view",
+      "description": "Price for a room with an extra view and a balcony.",
+      "currency": "RON",
+      "price": 274,
+      "roomTypeIds": ["extra-view"],
+      "availableForReservation": {
+        "from": "2018-01-01",
+        "to": "2018-12-31"
+      },
+      "availableForTravel": {
+        "from": "2018-10-31",
+        "to": "2018-12-31"
+      },
+      "modifiers": [
+        {
+          "adjustment": -30,
+          "conditions": {
+            "minLengthOfStay": 30
+          }
+        }
+      ]
+    }
+  }
+}
