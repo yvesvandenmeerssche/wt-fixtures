@@ -24,7 +24,8 @@
     "currency": "RON",
     "amenities": [
        "restaurant",
-       "vending machine"
+       "vending machine",
+       "parking"
     ],
     "images": [
       "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/tree/png/tree--gradient-on-white.png",
@@ -129,7 +130,7 @@
         "to": "2019-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-31",
+        "from": "2018-01-01",
         "to": "2019-12-31"
       }
     },
@@ -144,7 +145,7 @@
         "to": "2019-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-31",
+        "from": "2018-01-01",
         "to": "2019-12-31"
       }
     },
@@ -159,7 +160,7 @@
         "to": "2019-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-31",
+        "from": "2018-01-01",
         "to": "2019-12-31"
       }
     },
@@ -174,9 +175,17 @@
         "to": "2019-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-31",
+        "from": "2018-01-01",
         "to": "2019-12-31"
-      }
+      },
+      "modifiers": [
+        {
+          "adjustment": -50,
+          "conditions": {
+            "maxAge": 10
+          }
+        }
+      ]
     }
   }
 }
