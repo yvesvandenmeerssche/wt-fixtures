@@ -26,7 +26,8 @@
        "restaurant",
        "sauna",
        "gym",
-       "parking"
+       "parking",
+       "wifi"
     ],
     "images": [
       "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/tree/png/tree--gradient-on-white.png",

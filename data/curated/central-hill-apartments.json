@@ -1,0 +1,111 @@
+{
+  "description": {
+    "name": "Central Hill Apartments",
+    "description": "Located on the hillside just across the valley from Dragolm's historical district, our apartments offer you the ideal possibility of spending a pleasant summer in the heart of Transylvania in a quiet neighbourhood, yet with full comfort of the city. The whole Central Hill area is known for its cosy cafes, excellent dining options as well as beautiful park walks. Do not hesitate to experience this yourself!",
+    "location": {
+      "latitude": 46.6546544,
+      "longitude": 23.8745633
+    },
+    "contacts": {
+      "general": {
+        "email": "central-hill-apartments@transrealities.ro",
+        "phone": "004044674788",
+        "url": "https://www.transrealities.ro"
+      }
+    },
+    "address": {
+      "line1": "Park Lane 554",
+      "line2": "",
+      "postalCode": "33317",
+      "city": "Dragolm",
+      "country": "RO"
+    },
+    "timezone": "Europe/Bucharest",
+    "currency": "RON",
+    "amenities": [],
+    "images": [
+      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/tree/png/tree--gradient-on-white.png",
+      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/full-logo/png/logo--black-on-green.png"
+    ],
+    "roomTypes": {
+      "apartment-1-bedroom": {
+        "name": "One-bedroom Apartment",
+        "description": "Small apartment with a single bedroom, kitchen and bathroom.",
+        "totalQuantity": 4,
+        "occupancy": {
+          "min": 1,
+          "max": 2
+        },
+        "amenities": [
+          "TV",
+          "wifi"
+        ],
+        "images": [
+          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+        ],
+        "properties": {
+          "nonSmoking": "all"
+        }
+      },
+      "apartment-2-bedroom": {
+        "name": "Two-bedroom Apartment",
+        "description": "Larger apartment with two bedrooms, kitchen, bathroom and a living room.",
+        "totalQuantity": 4,
+        "occupancy": {
+          "min": 1,
+          "max": 5
+        },
+        "amenities": [
+          "TV",
+          "wifi"
+        ],
+        "images": [
+          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+        ],
+        "properties": {
+          "nonSmoking": "all"
+        }
+      }
+    },
+    "cancellationPolicies": [
+      {
+        "from": "2018-01-01",
+        "to": "2018-12-31",
+        "deadline": 60,
+        "amount": 25
+      }
+    ]
+  },
+  "ratePlans": {
+    "apartment-1-bedroom": {
+      "name": "One-bedroom apartment",
+      "description": "Price per week for the smaller apartment.",
+      "currency": "RON",
+      "price": 1540,
+      "roomTypeIds": ["apartment-1-bedroom"],
+      "availableForReservation": {
+        "from": "2018-01-01",
+        "to": "2018-12-31"
+      },
+      "availableForTravel": {
+        "from": "2018-06-01",
+        "to": "2019-09-30"
+      }
+    },
+    "apartment-12-bedroom": {
+      "name": "Two-bedroom apartment",
+      "description": "Price per week for the larger apartment.",
+      "currency": "RON",
+      "price": 2240,
+      "roomTypeIds": ["apartment-2-bedroom"],
+      "availableForReservation": {
+        "from": "2018-01-01",
+        "to": "2018-12-31"
+      },
+      "availableForTravel": {
+        "from": "2018-06-01",
+        "to": "2019-09-30"
+      }
+    }
+  }
+}
