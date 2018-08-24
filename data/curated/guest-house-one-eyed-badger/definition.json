@@ -28,8 +28,10 @@
        "bar"
     ],
     "images": [
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/tree/png/tree--gradient-on-white.png",
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/full-logo/png/logo--black-on-green.png"
+      "images/building.jpg",
+      "images/building2.jpg",
+      "images/bar.jpg",
+      "images/fireplace.jpg"
     ],
     "roomTypes": {
       "single-room": {
@@ -46,7 +48,8 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/room.jpg",
+          "images/bed.jpg"
         ],
         "properties": {
           "nonSmoking": "none"
@@ -66,7 +69,8 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/room.jpg",
+          "images/bed.jpg"
         ],
         "properties": {
           "nonSmoking": "none"
@@ -88,7 +92,9 @@
           "roof light"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/room2.jpg",
+          "images/bed-table.jpg",
+          "images/extra-view.jpg"
         ],
         "properties": {
           "nonSmoking": "none"
