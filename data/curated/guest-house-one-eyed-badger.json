@@ -119,11 +119,11 @@
       "roomTypeIds": ["single-room"],
       "availableForReservation": {
         "from": "2018-01-01",
-        "to": "2018-12-31"
+        "to": "2018-12-01"
       },
       "availableForTravel": {
-        "from": "2018-10-31",
-        "to": "2018-12-31"
+        "from": "2018-01-01",
+        "to": "2018-12-16"
       },
       "modifiers": [
         {
@@ -142,11 +142,11 @@
       "roomTypeIds": ["twin-bed"],
       "availableForReservation": {
         "from": "2018-01-01",
-        "to": "2018-12-31"
+        "to": "2018-12-01"
       },
       "availableForTravel": {
-        "from": "2018-10-31",
-        "to": "2018-12-31"
+        "from": "2018-01-01",
+        "to": "2018-12-16"
       },
       "modifiers": [
         {
@@ -165,11 +165,11 @@
       "roomTypeIds": ["extra-view"],
       "availableForReservation": {
         "from": "2018-01-01",
-        "to": "2018-12-31"
+        "to": "2018-12-01"
       },
       "availableForTravel": {
-        "from": "2018-10-31",
-        "to": "2018-12-31"
+        "from": "2018-01-01",
+        "to": "2018-12-16"
       },
       "modifiers": [
         {
