@@ -1,16 +1,16 @@
 {
   "description": {
-    "name": "Hotel Silver Tower",
-    "description": "Welcome to Silver Tower hotel, the symbol of modern Dragolm. No matter if you come for a business trip, a conference or just for vacation - this is the right place to stay at. Our rooms are cosy, air conditioned and equipped with design furniture. It goes without saying that all of them have private social facilities. Upon request, we can pick you up from the Dragolm airport, provide you with representative spaces for any kind of event or even arrange custom catering. For more information, plase use one of the contact channels.",
+    "name": "Hotel Blue Tower",
+    "description": "Welcome to Blue Tower hotel, the symbol of modern Dragolm. No matter if you come for a business trip, a conference or just for vacation - this is the right place to stay at. Our rooms are cosy, air conditioned and equipped with design furniture. It goes without saying that all of them have private social facilities. Upon request, we can pick you up from the Dragolm airport, provide you with representative spaces for any kind of event or even arrange custom catering. For more information, plase use one of the contact channels.",
     "location": {
       "latitude": 46.2104171,
       "longitude": 23.1109377
     },
     "contacts": {
       "general": {
-        "email": "reception@silver-tower.com",
+        "email": "reception@blue-tower.com",
         "phone": "004078998746",
-        "url": "https://www.silver-tower.com"
+        "url": "https://www.blue-tower.com"
       }
     },
     "address": {
@@ -30,8 +30,12 @@
        "wifi"
     ],
     "images": [
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/tree/png/tree--gradient-on-white.png",
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/full-logo/png/logo--black-on-green.png"
+      "images/building.jpg",
+      "images/lobby.jpg",
+      "images/hallway.jpg",
+      "images/gym.jpg",
+      "images/sauna.jpg",
+      "images/restaurant.jpg"
     ],
     "roomTypes": {
       "single-room": {
@@ -47,7 +51,8 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/single.jpg",
+          "images/bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -66,7 +71,8 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/twin.jpg",
+          "images/bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -85,7 +91,8 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/kingsize.jpg",
+          "images/bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -104,7 +111,8 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/luxury-single.jpg",
+          "images/luxury-bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -123,7 +131,8 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/luxury-twin.jpg",
+          "images/luxury-bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -142,15 +151,16 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/luxury-kingsize.jpg",
+          "images/luxury-bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
         }
       },
-      "presidential-apartment": {
-        "name": "Presidential apartment",
-        "description": "A three-room presidential apartment with two bathrooms and an excellent view of Dragolm and the surrounding mountains.",
+      "presidential-suite": {
+        "name": "Presidential suite",
+        "description": "A three-room presidential suite with two bathrooms and an excellent view of Dragolm and the surrounding mountains.",
         "totalQuantity": 2,
         "occupancy": {
           "min": 1,
@@ -161,7 +171,8 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/presidential-suite.jpg",
+          "images/luxury-bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "none"
@@ -628,12 +639,12 @@
         }
       }
     },
-    "presidential-apartment-before-season": {
-      "name": "Presidential apartment - before season",
-      "description": "Off season price for the presidential apartment",
+    "presidential-suite-before-season": {
+      "name": "Presidential suite - before season",
+      "description": "Off season price for the presidential suite",
       "currency": "EUR",
       "price": 240,
-      "roomTypeIds": ["presidential-apartment"],
+      "roomTypeIds": ["presidential-suite"],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-04-30"
@@ -651,12 +662,12 @@
         }
       ]
     },
-    "presidential-apartment-after-season": {
-      "name": "Presidential apartment - after season",
-      "description": "Off season price for the presidential apartment",
+    "presidential-suite-after-season": {
+      "name": "Presidential suite - after season",
+      "description": "Off season price for the presidential suite",
       "currency": "EUR",
       "price": 240,
-      "roomTypeIds": ["presidential-apartment"],
+      "roomTypeIds": ["presidential-suite"],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-12-31"
@@ -674,12 +685,12 @@
         }
       ]
     },
-    "presidential-apartment-summer": {
-      "name": "Presidential apartment - high season",
-      "description": "High season price for the presidential apartment",
+    "presidential-suite-summer": {
+      "name": "Presidential suite - high season",
+      "description": "High season price for the presidential suite",
       "currency": "EUR",
       "price": 300,
-      "roomTypeIds": ["presidential-apartment"],
+      "roomTypeIds": ["presidential-suite"],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-09-30"
