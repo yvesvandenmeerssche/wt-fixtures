@@ -23,11 +23,13 @@
     "timezone": "Europe/Bucharest",
     "currency": "RON",
     "amenities": [
-       "vending machine"
+       "vending machine",
+       "laundromat"
     ],
     "images": [
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/tree/png/tree--gradient-on-white.png",
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/full-logo/png/logo--black-on-green.png"
+      "images/building1.jpg",
+      "images/building2.jpg",
+      "images/laundromat.jpg"
     ],
     "roomTypes": {
       "shared-room-4": {
@@ -42,7 +44,7 @@
           "safe"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/four-bed-room.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -60,7 +62,8 @@
           "safe"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/bunk-beds.jpg",
+          "images/bunk-beds2.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
