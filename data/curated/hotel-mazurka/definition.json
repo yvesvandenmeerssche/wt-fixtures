@@ -28,8 +28,9 @@
        "parking"
     ],
     "images": [
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/tree/png/tree--gradient-on-white.png",
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/full-logo/png/logo--black-on-green.png"
+      "images/building.jpg",
+      "images/restaurant.jpg",
+      "images/vending_machine.jpg"
     ],
     "roomTypes": {
       "single-room-economy": {
@@ -42,7 +43,9 @@
         },
         "amenities": [],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/single_economy.jpg",
+          "images/public_bathroom.jpg",
+          "images/public_toilet.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -60,7 +63,8 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/single_bed.jpg",
+          "images/private_bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -78,7 +82,9 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/double_bed.jpg",
+          "images/double_bed2.jpg",
+          "images/private_bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -96,7 +102,9 @@
           "TV"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/double_bed3.jpg",
+          "images/twin_beds.jpg",
+          "images/private_bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
