@@ -24,9 +24,9 @@
     "currency": "RON",
     "amenities": [],
     "images": [
-      "images/building.jpg",
-      "images/street.jpg",
-      "images/park.jpg"
+      "building.jpg",
+      "street.jpg",
+      "park.jpg"
     ],
     "roomTypes": {
       "apartment-1-bedroom": {
@@ -42,10 +42,10 @@
           "wifi"
         ],
         "images": [
-          "images/double-bed.jpg",
-          "images/kitchen1.jpg",
-          "images/kitchen2.jpg",
-          "images/bathroom2.jpg"
+          "double-bed.jpg",
+          "kitchen1.jpg",
+          "kitchen2.jpg",
+          "bathroom2.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -64,11 +64,11 @@
           "wifi"
         ],
         "images": [
-          "images/double-bed2.jpg",
-          "images/single-bed.jpg",
-          "images/larger-kitchen.jpg",
-          "images/livingroom.jpg",
-          "images/bathroom.jpg"
+          "double-bed2.jpg",
+          "single-bed.jpg",
+          "larger-kitchen.jpg",
+          "livingroom.jpg",
+          "bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "all"

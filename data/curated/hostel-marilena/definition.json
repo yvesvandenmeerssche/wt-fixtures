@@ -27,9 +27,9 @@
        "laundromat"
     ],
     "images": [
-      "images/building1.jpg",
-      "images/building2.jpg",
-      "images/laundromat.jpg"
+      "building1.jpg",
+      "building2.jpg",
+      "laundromat.jpg"
     ],
     "roomTypes": {
       "shared-room-4": {
@@ -44,7 +44,7 @@
           "safe"
         ],
         "images": [
-          "images/four-bed-room.jpg"
+          "four-bed-room.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -62,8 +62,8 @@
           "safe"
         ],
         "images": [
-          "images/bunk-beds.jpg",
-          "images/bunk-beds2.jpg"
+          "bunk-beds.jpg",
+          "bunk-beds2.jpg"
         ],
         "properties": {
           "nonSmoking": "all"

@@ -54,7 +54,7 @@ function preprocessHotel (data, images) {
   const swarm = config.SWARM_PROVIDER,
     convert = (x) => `${swarm.method}://${swarm.host}:${swarm.port}/bzz-raw:/${images[x]}`;
   data.description.images = data.description.images.map(convert);
-  for (let roomTypeId of data.description.roomTypes) {
+  for (let roomTypeId in data.description.roomTypes) {
     const roomType = data.description.roomTypes[roomTypeId];
     roomType.images = roomType.images.map(convert);
   }
@@ -77,22 +77,24 @@ function uploadHotel (rawData, images, accessKey) {
           'X-Wallet-Password': config.WT_WRITE_API_WALLET_PASSWORD,
         }
       },
+      responseData = [],
       request = httpModule.request(options, response => {
+        response.on("data", chunk => responseData.push(chunk));
         response.on("end", () => {
           if (response.statusCode > 299) {
             reject(new Error(`Error ${response.statusCode}`));
           }
-          resolve();
+          resolve(JSON.parse(String(Buffer.concat(responseData))).address);
         });
       });
     request.on("error", err => reject(err));
-    request.write(JSON.strinfigy(data));
+    request.write(JSON.stringify(data));
     request.end();
   });
 }
 
 function createAccount () {
-  const data = `{"wallet": ${config.WT_WRITE_API_WALLET}}, "uploaders": {"root": {"swarm": {}}}}`,
+  const data = `{"wallet": ${config.WT_WRITE_API_WALLET}, "uploaders": {"root": {"swarm": {}}}}`,
     httpModule = getHttpModule(config.WT_WRITE_API.method);
 
   return new Promise((resolve, reject) => {
@@ -100,7 +102,7 @@ function createAccount () {
         method: 'POST',
         hostname: config.WT_WRITE_API.host,
         port: config.WT_WRITE_API.port,
-        path: '/accounts/',
+        path: '/account/',
         headers: {
           'Content-Type': 'application/json',
         }
@@ -144,7 +146,8 @@ function createAccount () {
       images[image] = await uploadImage(path.join(imagePath, image));
     }
     log(`Uploading hotel data`);
-    const hotelData = require(path.join(hotelPath, 'definition.json'));
-    await uploadHotel(hotelData, images);
+    const hotelData = require(path.join(hotelPath, 'definition.json')),
+      hotelAddress = await uploadHotel(hotelData, images, accessKey);
+    log(`\t${hotelAddress}`);
   }
 })();

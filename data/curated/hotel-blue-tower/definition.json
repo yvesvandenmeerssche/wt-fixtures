@@ -30,12 +30,12 @@
        "wifi"
     ],
     "images": [
-      "images/building.jpg",
-      "images/lobby.jpg",
-      "images/hallway.jpg",
-      "images/gym.jpg",
-      "images/sauna.jpg",
-      "images/restaurant.jpg"
+      "building.jpg",
+      "lobby.jpg",
+      "hallway.jpg",
+      "gym.jpg",
+      "sauna.jpg",
+      "restaurant.jpg"
     ],
     "roomTypes": {
       "single-room": {
@@ -51,8 +51,8 @@
           "TV"
         ],
         "images": [
-          "images/single.jpg",
-          "images/bathroom.jpg"
+          "single.jpg",
+          "bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -71,8 +71,8 @@
           "TV"
         ],
         "images": [
-          "images/twin.jpg",
-          "images/bathroom.jpg"
+          "twin.jpg",
+          "bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -91,8 +91,8 @@
           "TV"
         ],
         "images": [
-          "images/kingsize.jpg",
-          "images/bathroom.jpg"
+          "kingsize.jpg",
+          "bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -111,8 +111,8 @@
           "TV"
         ],
         "images": [
-          "images/luxury-single.jpg",
-          "images/luxury-bathroom.jpg"
+          "luxury-single.jpg",
+          "luxury-bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -131,8 +131,8 @@
           "TV"
         ],
         "images": [
-          "images/luxury-twin.jpg",
-          "images/luxury-bathroom.jpg"
+          "luxury-twin.jpg",
+          "luxury-bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -151,8 +151,8 @@
           "TV"
         ],
         "images": [
-          "images/luxury-kingsize.jpg",
-          "images/luxury-bathroom.jpg"
+          "luxury-kingsize.jpg",
+          "luxury-bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "some"
@@ -171,8 +171,8 @@
           "TV"
         ],
         "images": [
-          "images/presidential-suite.jpg",
-          "images/luxury-bathroom.jpg"
+          "presidential-suite.jpg",
+          "luxury-bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "none"

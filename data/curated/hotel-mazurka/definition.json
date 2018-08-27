@@ -28,9 +28,9 @@
        "parking"
     ],
     "images": [
-      "images/building.jpg",
-      "images/restaurant.jpg",
-      "images/vending_machine.jpg"
+      "building.jpg",
+      "restaurant.jpg",
+      "vending_machine.jpg"
     ],
     "roomTypes": {
       "single-room-economy": {
@@ -43,9 +43,9 @@
         },
         "amenities": [],
         "images": [
-          "images/single_economy.jpg",
-          "images/public_bathroom.jpg",
-          "images/public_toilet.jpg"
+          "single_economy.jpg",
+          "public_bathroom.jpg",
+          "public_toilet.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -63,8 +63,8 @@
           "TV"
         ],
         "images": [
-          "images/single_bed.jpg",
-          "images/private_bathroom.jpg"
+          "single_bed.jpg",
+          "private_bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -82,9 +82,9 @@
           "TV"
         ],
         "images": [
-          "images/double_bed.jpg",
-          "images/double_bed2.jpg",
-          "images/private_bathroom.jpg"
+          "double_bed.jpg",
+          "double_bed2.jpg",
+          "private_bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -102,9 +102,9 @@
           "TV"
         ],
         "images": [
-          "images/double_bed3.jpg",
-          "images/twin_beds.jpg",
-          "images/private_bathroom.jpg"
+          "double_bed3.jpg",
+          "twin_beds.jpg",
+          "private_bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
