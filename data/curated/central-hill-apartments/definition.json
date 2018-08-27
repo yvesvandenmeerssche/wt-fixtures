@@ -24,13 +24,14 @@
     "currency": "RON",
     "amenities": [],
     "images": [
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/tree/png/tree--gradient-on-white.png",
-      "https://raw.githubusercontent.com/windingtree/media/master/logo-variants/full-logo/png/logo--black-on-green.png"
+      "images/building.jpg",
+      "images/street.jpg",
+      "images/park.jpg"
     ],
     "roomTypes": {
       "apartment-1-bedroom": {
         "name": "One-bedroom Apartment",
-        "description": "Small apartment with a single bedroom, kitchen and bathroom.",
+        "description": "Small apartment with a single bedroom, kitchen and bathroom. The bedroom contains a double bed.",
         "totalQuantity": 4,
         "occupancy": {
           "min": 1,
@@ -41,7 +42,10 @@
           "wifi"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/double-bed.jpg",
+          "images/kitchen1.jpg",
+          "images/kitchen2.jpg",
+          "images/bathroom2.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -49,7 +53,7 @@
       },
       "apartment-2-bedroom": {
         "name": "Two-bedroom Apartment",
-        "description": "Larger apartment with two bedrooms, kitchen, bathroom and a living room.",
+        "description": "Larger apartment with two bedrooms, kitchen, bathroom and a living room. In one of the bedrooms, there is a double bed; in the other one, there are twin beds.",
         "totalQuantity": 4,
         "occupancy": {
           "min": 1,
@@ -60,7 +64,11 @@
           "wifi"
         ],
         "images": [
-          "https://raw.githubusercontent.com/windingtree/media/web-assets/logo-variants/full-logo/png/logo--white.png"
+          "images/double-bed2.jpg",
+          "images/single-bed.jpg",
+          "images/larger-kitchen.jpg",
+          "images/livingroom.jpg",
+          "images/bathroom.jpg"
         ],
         "properties": {
           "nonSmoking": "all"
@@ -92,7 +100,7 @@
         "to": "2019-09-30"
       }
     },
-    "apartment-12-bedroom": {
+    "apartment-2-bedroom": {
       "name": "Two-bedroom apartment",
       "description": "Price per week for the larger apartment.",
       "currency": "RON",
