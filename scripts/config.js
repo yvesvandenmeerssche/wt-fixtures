@@ -3,7 +3,7 @@
 const path = require('path');
 
 module.exports = {
-  DATA_PATH: path.join('..', 'data', 'curated'),
+  DATA_PATH: path.join(__dirname, 'data', 'curated'),
   WT_WRITE_API: {
     method: 'http',
     host: 'localhost',

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Download swarm and run it locally in singleton mode for test purposes.
+# Download swarm and run it locally in singleton mode. This is a utility for test purposes.
 
 # No need to do anything if swarm already runs.
 nc -z localhost "8500"
