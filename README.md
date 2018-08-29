@@ -5,7 +5,7 @@ Test data for the WT platform. This repository contains:
 1. Hand-crafted ("curated") data of fictitious hotels, including images.
 2. A generator for hotel data.
 3. An uploader that sends hotel data (curated or generated) to
-   the WT platform via the WT Write API.
+   the WT platform via the WT Write API and images to Swarm.
 
 ## Prerequisites
 
@@ -23,6 +23,10 @@ generation):
 cd scripts
 npm install chance
 ```
+
+Finally, make sure you have access to a running Swarm node
+(e.g. via https://swarm-gateways.net/) and a WT Write API instance
+(version 0.2.0 is assumed) pointing to the same Swarm network.
 
 ## Uploading curated data.
 
@@ -62,7 +66,7 @@ node upload.js generated
 
 ## Running a local swarm node
 
-For test purposes, you can run a local swarm node. To make it
+For test purposes, you can run a local (singleton) swarm node. To make it
 easier, a utility script is provided:
 
 ```
