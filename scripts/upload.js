@@ -19,37 +19,42 @@ function getHttpModule (method) {
   }
 }
 
+/**
+ * Upload an image to Swarm.
+ */
 function uploadImage (imagePath) {
   const imageBuffer = fs.readFileSync(imagePath),
     httpModule = getHttpModule(config.SWARM_PROVIDER.method);
 
   return new Promise((resolve, reject) => {
-    const options = {
+    const data = [],
+      request = httpModule.request({
         method: 'POST',
         hostname: config.SWARM_PROVIDER.host,
         port: config.SWARM_PROVIDER.port,
         path: '/bzz-raw:/',
         headers: {
           'Content-Type': 'application/octet-stream',
-          'Content-Length': imageBuffer.length
-        }
-      },
-      data = [],
-      request = httpModule.request(options, response => {
-        response.on("data", chunk => data.push(chunk));
-        response.on("end", () => {
+          'Content-Length': imageBuffer.length,
+        },
+      }, (response) => {
+        response.on('data', chunk => data.push(chunk));
+        response.on('end', () => {
           if (response.statusCode > 299) {
             reject(new Error(`Error ${response.statusCode}`));
           }
           resolve(String(Buffer.concat(data)));
         });
       });
-    request.on("error", err => reject(err));
+    request.on('error', err => reject(err));
     request.write(imageBuffer);
     request.end();
   });
 }
 
+/**
+ * Replace images with their actual URLs.
+ */
 function preprocessHotel (data, images) {
   const swarm = config.SWARM_PROVIDER,
     convert = (x) => `${swarm.method}://${swarm.host}:${swarm.port}/bzz-raw:/${images[x]}`;
@@ -61,12 +66,16 @@ function preprocessHotel (data, images) {
   return data;
 }
 
+/**
+ * Upload hotel via the WT Write API.
+ */
 function uploadHotel (rawData, images, accessKey) {
   const data = preprocessHotel(rawData, images),
     httpModule = getHttpModule(config.WT_WRITE_API.method);
 
   return new Promise((resolve, reject) => {
-    const options = {
+    const responseData = [],
+      request = httpModule.request({
         method: 'POST',
         hostname: config.WT_WRITE_API.host,
         port: config.WT_WRITE_API.port,
@@ -75,79 +84,90 @@ function uploadHotel (rawData, images, accessKey) {
           'Content-Type': 'application/json',
           'X-Access-Key': accessKey,
           'X-Wallet-Password': config.WT_WRITE_API_WALLET_PASSWORD,
-        }
-      },
-      responseData = [],
-      request = httpModule.request(options, response => {
-        response.on("data", chunk => responseData.push(chunk));
-        response.on("end", () => {
+        },
+      }, (response) => {
+        response.on('data', chunk => responseData.push(chunk));
+        response.on('end', () => {
           if (response.statusCode > 299) {
             reject(new Error(`Error ${response.statusCode}`));
           }
           resolve(JSON.parse(String(Buffer.concat(responseData))).address);
         });
       });
-    request.on("error", err => reject(err));
+    request.on('error', err => reject(err));
     request.write(JSON.stringify(data));
     request.end();
   });
 }
 
+/**
+ * Create a new account in the configured WT Write API.
+ */
 function createAccount () {
   const data = `{"wallet": ${config.WT_WRITE_API_WALLET}, "uploaders": {"root": {"swarm": {}}}}`,
     httpModule = getHttpModule(config.WT_WRITE_API.method);
 
   return new Promise((resolve, reject) => {
-    const options = {
+    const responseData = [],
+      request = httpModule.request({
         method: 'POST',
         hostname: config.WT_WRITE_API.host,
         port: config.WT_WRITE_API.port,
         path: '/account/',
         headers: {
           'Content-Type': 'application/json',
-        }
-      },
-      responseData = [],
-      request = httpModule.request(options, response => {
-        response.on("data", chunk => responseData.push(chunk));
-        response.on("end", () => {
+        },
+      }, response => {
+        response.on('data', chunk => responseData.push(chunk));
+        response.on('end', () => {
           if (response.statusCode > 299) {
             reject(new Error(`Error ${response.statusCode}`));
           }
           resolve(JSON.parse(String(Buffer.concat(responseData))).accessKey);
         });
       });
-    request.on("error", err => reject(err));
+    request.on('error', err => reject(err));
     request.write(data);
     request.end();
   });
 }
 
-(async () => {
+async function main () {
+  const dataset = process.argv[2];
+  let dataPath;
+  if (dataset === 'curated') {
+    dataPath = config.DATA_PATH_CURATED;
+  } else if (dataset === 'generated') {
+    dataPath = config.DATA_PATH_GENERATED;
+  } else {
+    throw new Error('Usage: node upload.js [curated|generated]');
+  }
+
   let accessKey;
-  if (! config.WT_WRITE_API_ACCESS_KEY) {
-    log(`Creating a new account in WT write API...`);
+  if (!config.WT_WRITE_API_ACCESS_KEY) {
+    log('Creating a new account in WT write API...');
     accessKey = await createAccount();
     log(`Obtained access key: ${accessKey}`);
   } else {
     accessKey = config.WT_WRITE_API_ACCESS_KEY;
   }
-  const hotels = fs.readdirSync(config.DATA_PATH_CURATED).filter((x) => {
-    return fs.lstatSync(path.join(config.DATA_PATH_CURATED, x)).isDirectory();
-  });
-  const images = {};
+
+  const hotels = fs.readdirSync(dataPath).filter((x) =>
+    fs.lstatSync(path.join(dataPath, x)).isDirectory());
   for (let hotel of hotels) {
     log(`\n\n=== Processing ${hotel} ===\n`);
-    const hotelPath = path.join(config.DATA_PATH_CURATED, hotel),
+    const hotelPath = path.join(dataPath, hotel),
       imagePath = path.join(hotelPath, 'images'),
       images = {};
     for (let image of fs.readdirSync(imagePath)) {
       log(`Uploading ${image}`);
       images[image] = await uploadImage(path.join(imagePath, image));
     }
-    log(`Uploading hotel data`);
+    log('Uploading hotel data');
     const hotelData = require(path.join(hotelPath, 'definition.json')),
       hotelAddress = await uploadHotel(hotelData, images, accessKey);
     log(`\t${hotelAddress}`);
   }
-})();
+}
+
+main();
