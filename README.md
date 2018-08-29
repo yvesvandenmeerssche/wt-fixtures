@@ -52,7 +52,9 @@ node generate.js 20 # Replace "20" with the desired hotel count.
 ```
 
 As a result, `DATA_PATH_GENERATED` (from `config.js`) should now
-contain a data directory for each generated hotel.
+contain a data directory for each generated hotel. All hotels
+are located within 45.5 - 47.5 lat and 22.5 - 24.5 long to
+simulate a metropolitan area.
 
 ## Uploading generated data.
 
