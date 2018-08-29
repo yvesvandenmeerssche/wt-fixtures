@@ -165,14 +165,14 @@
         {
           "adjustment": -40,
           "conditions": {
-            "minOccupancy": 2
+            "minOccupants": 2
           }
         },
         {
           "adjustment": -70,
           "conditions": {
             "minLengthOfStay": 30,
-            "minOccupancy": 2
+            "minOccupants": 2
           }
         }
       ]

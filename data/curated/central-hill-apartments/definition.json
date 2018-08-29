@@ -103,7 +103,7 @@
       "modifiers": [
         {
           "adjustment": -50,
-          "conditions": { "minOccupancy": 2 }
+          "conditions": { "minOccupants": 2 }
         }
       ]
     },

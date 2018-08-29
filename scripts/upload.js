@@ -89,6 +89,7 @@ function uploadHotel (rawData, images, accessKey) {
         response.on('data', chunk => responseData.push(chunk));
         response.on('end', () => {
           if (response.statusCode > 299) {
+            log(String(Buffer.concat(responseData)));
             reject(new Error(`Error ${response.statusCode}`));
           }
           resolve(JSON.parse(String(Buffer.concat(responseData))).address);
@@ -113,7 +114,7 @@ function createAccount () {
         method: 'POST',
         hostname: config.WT_WRITE_API.host,
         port: config.WT_WRITE_API.port,
-        path: '/account/',
+        path: '/accounts/',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -121,6 +122,7 @@ function createAccount () {
         response.on('data', chunk => responseData.push(chunk));
         response.on('end', () => {
           if (response.statusCode > 299) {
+            log(String(Buffer.concat(responseData)));
             reject(new Error(`Error ${response.statusCode}`));
           }
           resolve(JSON.parse(String(Buffer.concat(responseData))).accessKey);

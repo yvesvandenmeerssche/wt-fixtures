@@ -40,7 +40,7 @@ const imagePaths = Array.prototype.concat.apply([], fs.readdirSync(config.DATA_P
       images: fs.readdirSync(path.join(config.DATA_PATH_CURATED, x, 'images')),
     };
   })
-  .map((x) => x.images.map((i) => path.join(config.DATA_PATH_CURATED, x.prefix, i))));
+  .map((x) => x.images.map((i) => path.join(config.DATA_PATH_CURATED, x.prefix, 'images', i))));
 
 // Generate unique IDs for images (because basenames are not unique).
 for (let imagePath of imagePaths) {

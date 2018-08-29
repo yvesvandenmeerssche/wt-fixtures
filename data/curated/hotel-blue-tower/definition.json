@@ -179,6 +179,7 @@
         }
       }
     },
+    "defaultCancellationAmount": 0,
     "cancellationPolicies": [
       {
         "from": "2018-01-01",
