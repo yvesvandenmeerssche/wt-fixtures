@@ -132,13 +132,13 @@ function createAccount () {
   } else {
     accessKey = config.WT_WRITE_API_ACCESS_KEY;
   }
-  const hotels = fs.readdirSync(config.DATA_PATH).filter((x) => {
-    return fs.lstatSync(path.join(config.DATA_PATH, x)).isDirectory();
+  const hotels = fs.readdirSync(config.DATA_PATH_CURATED).filter((x) => {
+    return fs.lstatSync(path.join(config.DATA_PATH_CURATED, x)).isDirectory();
   });
   const images = {};
   for (let hotel of hotels) {
     log(`\n\n=== Processing ${hotel} ===\n`);
-    const hotelPath = path.join(config.DATA_PATH, hotel),
+    const hotelPath = path.join(config.DATA_PATH_CURATED, hotel),
       imagePath = path.join(hotelPath, 'images'),
       images = {};
     for (let image of fs.readdirSync(imagePath)) {
