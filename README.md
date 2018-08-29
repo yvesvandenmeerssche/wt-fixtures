@@ -2,7 +2,7 @@
 
 Test data for the WT platform. This repository contains:
 
-1. Manually curated data of fictitious hotels, including images.
+1. Hand-crafted ("curated") data of fictitious hotels, including images.
 2. A generator for hotel data.
 3. An uploader that sends hotel data (curated or generated) to
    the WT platform via the WT Write API.
@@ -27,12 +27,12 @@ npm install chance
 ## Uploading curated data.
 
 First of all, verify the settings in `scripts/config.js`. Among
-others, you should provide endpoints of:
+others, you should provide endpoints for:
 
   - A running Swarm provider instance.
   - A running WT Write API instance.
 
-After you're done, do the following to upload the curated data
+When you're done, do the following to upload the curated data
 to WT:
 
 ```
@@ -52,8 +52,8 @@ contain a data directory for each generated hotel.
 
 ## Uploading generated data.
 
-Verify the settings in `scripts/config.js` in the same way you
-did when uploading curated data. Then run the following:
+Verify the settings in `scripts/config.js` as described in the
+`Uploading curated data` section. Then run the following:
 
 ```
 cd scripts
