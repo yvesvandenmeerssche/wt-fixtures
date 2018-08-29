@@ -111,6 +111,7 @@
         }
       }
     },
+    "defaultCancellationAmount": 0,
     "cancellationPolicies": [
       {
         "from": "2018-01-01",
@@ -159,25 +160,10 @@
     },
     "double-room": {
       "name": "Double room",
-      "description": "Price per night for a double room.",
+      "description": "Price per person per night for a double room.",
       "currency": "RON",
       "price": 220,
       "roomTypeIds": ["double-room"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2019-12-31"
-      },
-      "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2019-12-31"
-      }
-    },
-    "family-room": {
-      "name": "Family room",
-      "description": "Price per night for a family room.",
-      "currency": "RON",
-      "price": 340,
-      "roomTypeIds": ["family-room"],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2019-12-31"
@@ -190,6 +176,49 @@
         {
           "adjustment": -50,
           "conditions": {
+            "minOccupants": 2
+          }
+        }
+      ]
+    },
+    "family-room": {
+      "name": "Family room",
+      "description": "Price per night for a family room.",
+      "currency": "RON",
+      "price": 170,
+      "roomTypeIds": ["family-room"],
+      "availableForReservation": {
+        "from": "2018-01-01",
+        "to": "2019-12-31"
+      },
+      "availableForTravel": {
+        "from": "2018-01-01",
+        "to": "2019-12-31"
+      },
+      "modifiers": [
+        {
+          "adjustment": -33,
+          "conditions": {
+            "minOccupants": 3
+          }
+        },
+        {
+          "adjustment": -50,
+          "conditions": {
+            "minOccupants": 4
+          }
+        },
+        {
+          "adjustment": -66.5,
+          "conditions": {
+            "minOccupants": 3,
+            "maxAge": 10
+          }
+        },
+        {
+          "adjustment": -75,
+          "conditions": {
+            "minOccupants": 4,
             "maxAge": 10
           }
         }

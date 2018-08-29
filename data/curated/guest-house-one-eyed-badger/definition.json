@@ -101,6 +101,7 @@
         }
       }
     },
+    "defaultCancellationAmount": 0,
     "cancellationPolicies": [
       {
         "from": "2018-01-01",
@@ -119,7 +120,7 @@
   "ratePlans": {
     "single-room": {
       "name": "Single room",
-      "description": "Price for a standard single room.",
+      "description": "Price per night for a standard single room.",
       "currency": "RON",
       "price": 184,
       "roomTypeIds": ["single-room"],
@@ -142,9 +143,9 @@
     },
     "twin-bed": {
       "name": "Twin bed",
-      "description": "Price for a twin bed room.",
+      "description": "Price per person per night for a twin bed room.",
       "currency": "RON",
-      "price": 244,
+      "price": 204,
       "roomTypeIds": ["twin-bed"],
       "availableForReservation": {
         "from": "2018-01-01",
@@ -160,12 +161,25 @@
           "conditions": {
             "minLengthOfStay": 30
           }
+        },
+        {
+          "adjustment": -40,
+          "conditions": {
+            "minOccupancy": 2
+          }
+        },
+        {
+          "adjustment": -70,
+          "conditions": {
+            "minLengthOfStay": 30,
+            "minOccupancy": 2
+          }
         }
       ]
     },
     "extra-view": {
       "name": "Extra view",
-      "description": "Price for a room with an extra view and a balcony.",
+      "description": "Price for the room with an extra view and a balcony.",
       "currency": "RON",
       "price": 274,
       "roomTypeIds": ["extra-view"],

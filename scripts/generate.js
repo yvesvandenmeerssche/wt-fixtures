@@ -113,6 +113,7 @@ function generateDescription () {
     "images": Chance.pickset(Object.keys(IMAGES), Chance.natural({ min: 1, max: 6 })),
     "roomTypes": {},
     "cancellationPolicies": generateCancellationPolicies(),
+    "defaultCancellationAmount": 0,
   };
 
   for (let i=0; i<Chance.natural({ min: 1, max: 10 }); i++) {

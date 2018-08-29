@@ -195,65 +195,19 @@
     ]
   },
   "ratePlans": {
-    "single-before-season": {
-      "name": "Single room - before season",
-      "description": "Off season price for single room",
-      "currency": "EUR",
-      "price": 60,
-      "roomTypeIds": ["single-room"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "modifiers": [
-        {
-          "adjustment": -10,
-          "conditions": {
-            "maxAge": 13
-          }
-        }
-      ]
-    },
-    "single-after-season": {
-      "name": "Single room - after season",
-      "description": "Off season price for a single room",
-      "currency": "EUR",
-      "price": 60,
-      "roomTypeIds": ["single-room"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-12-31"
-      },
-      "availableForTravel": {
-        "from": "2018-10-01",
-        "to": "2018-12-31"
-      },
-      "modifiers": [
-        {
-          "adjustment": -10,
-          "conditions": {
-            "maxAge": 13
-          }
-        }
-      ]
-    },
-    "single-summer": {
-      "name": "Single room - high season",
-      "description": "High season price for a single room",
+    "single": {
+      "name": "Single room",
+      "description": "Price for a single room",
       "currency": "EUR",
       "price": 75,
       "roomTypeIds": ["single-room"],
       "availableForReservation": {
         "from": "2018-01-01",
-        "to": "2018-09-30"
+        "to": "2018-12-31"
       },
       "availableForTravel": {
-        "from": "2018-05-01",
-        "to": "2018-09-30"
+        "from": "2018-01-01",
+        "to": "2018-12-01"
       },
       "modifiers": [
         {
@@ -261,49 +215,51 @@
           "conditions": {
             "maxAge": 13
           }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31",
+            "maxAge": 13
+          }
         }
-      ],
-      "restrictions": {
-        "lengthOfStay": {
-          "min": 2
-        }
-      }
+      ]
     },
-    "twin-before-season": {
-      "name": "Twin bed - before season",
-      "description": "Off season price for twin bed",
+    "twin": {
+      "name": "Twin bed",
+      "description": "Price per person per night for twin bed",
       "currency": "EUR",
       "price": 80,
       "roomTypeIds": ["twin-bed"],
       "availableForReservation": {
         "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "modifiers": [
-        {
-          "adjustment": -10,
-          "conditions": {
-            "maxAge": 13
-          }
-        }
-      ]
-    },
-    "twin-after-season": {
-      "name": "Twin bed - after season",
-      "description": "Off season price for twin bed",
-      "currency": "EUR",
-      "price": 80,
-      "roomTypeIds": ["twin-bed"],
-      "availableForReservation": {
-        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-01",
+        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "modifiers": [
@@ -312,72 +268,98 @@
           "conditions": {
             "maxAge": 13
           }
-        }
-      ]
-    },
-    "twin-summer": {
-      "name": "Twin bed - high season",
-      "description": "High season price for twin bed",
-      "currency": "EUR",
-      "price": 100,
-      "roomTypeIds": ["twin-bed"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-09-30"
-      },
-      "availableForTravel": {
-        "from": "2018-05-01",
-        "to": "2018-09-30"
-      },
-      "modifiers": [
+        },
         {
-          "adjustment": -10,
+          "adjustment": -50,
           "conditions": {
+            "minOccupants": 2
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -55,
+          "conditions": {
+            "minOccupants": 2,
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31",
             "maxAge": 13
           }
         }
-      ],
-      "restrictions": {
-        "lengthOfStay": {
-          "min": 2
-        }
-      }
+      ]
     },
-    "kingsize-before-season": {
-      "name": "King size bed - before season",
-      "description": "Off season price for king size bed",
+    "kingsize": {
+      "name": "King size bed",
+      "description": "Price per person per night for king size bed",
       "currency": "EUR",
       "price": 80,
       "roomTypeIds": ["king-size-bed"],
       "availableForReservation": {
         "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "modifiers": [
-        {
-          "adjustment": -10,
-          "conditions": {
-            "maxAge": 13
-          }
-        }
-      ]
-    },
-    "kingsize-after-season": {
-      "name": "King size bed - after season",
-      "description": "Off season price for king size bed",
-      "currency": "EUR",
-      "price": 80,
-      "roomTypeIds": ["king-size-bed"],
-      "availableForReservation": {
-        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-01",
+        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "modifiers": [
@@ -386,72 +368,98 @@
           "conditions": {
             "maxAge": 13
           }
-        }
-      ]
-    },
-    "kingsize-summer": {
-      "name": "King size bed - high season",
-      "description": "High season price for king size bed",
-      "currency": "EUR",
-      "price": 100,
-      "roomTypeIds": ["king-size-bed"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-09-30"
-      },
-      "availableForTravel": {
-        "from": "2018-05-01",
-        "to": "2018-09-30"
-      },
-      "modifiers": [
+        },
         {
-          "adjustment": -10,
+          "adjustment": -50,
           "conditions": {
+            "minOccupants": 2
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -55,
+          "conditions": {
+            "minOccupants": 2,
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31",
             "maxAge": 13
           }
         }
-      ],
-      "restrictions": {
-        "lengthOfStay": {
-          "min": 2
-        }
-      }
+      ]
     },
-    "luxury-single-before-season": {
-      "name": "Luxury single room - before season",
-      "description": "Off season price for a luxury single room",
+    "luxury-single": {
+      "name": "Luxury single room",
+      "description": "Price per person per night for a luxury single room",
       "currency": "EUR",
       "price": 100,
       "roomTypeIds": ["luxury-single-room"],
       "availableForReservation": {
         "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "modifiers": [
-        {
-          "adjustment": -10,
-          "conditions": {
-            "maxAge": 13
-          }
-        }
-      ]
-    },
-    "luxury-single-after-season": {
-      "name": "Luxury single room - after season",
-      "description": "Off season price for a luxury single room",
-      "currency": "EUR",
-      "price": 100,
-      "roomTypeIds": ["luxury-single-room"],
-      "availableForReservation": {
-        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-01",
+        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "modifiers": [
@@ -460,63 +468,42 @@
           "conditions": {
             "maxAge": 13
           }
-        }
-      ]
-    },
-    "luxury-single-summer": {
-      "name": "Luxury single room - high season",
-      "description": "High season price for a luxury single room",
-      "currency": "EUR",
-      "price": 125,
-      "roomTypeIds": ["luxury-single-room"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-09-30"
-      },
-      "availableForTravel": {
-        "from": "2018-05-01",
-        "to": "2018-09-30"
-      },
-      "modifiers": [
+        },
         {
-          "adjustment": -10,
+          "adjustment": -20,
           "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30",
             "maxAge": 13
           }
-        }
-      ],
-      "restrictions": {
-        "lengthOfStay": {
-          "min": 2
-        }
-      }
-    },
-    "luxury-twin-before-season": {
-      "name": "Luxury twin bed - before season",
-      "description": "Off season price for luxury twin bed",
-      "currency": "EUR",
-      "price": 120,
-      "roomTypeIds": ["luxury-twin-bed"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "modifiers": [
+        },
         {
-          "adjustment": -10,
+          "adjustment": -30,
           "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31",
             "maxAge": 13
           }
         }
       ]
     },
-    "luxury-twin-after-season": {
-      "name": "Luxury twin bed - after season",
-      "description": "Off season price for luxury twin bed",
+    "luxury-twin": {
+      "name": "Luxury twin bed",
+      "description": "Price per person per night for luxury twin bed",
       "currency": "EUR",
       "price": 120,
       "roomTypeIds": ["luxury-twin-bed"],
@@ -525,7 +512,7 @@
         "to": "2018-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-01",
+        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "modifiers": [
@@ -534,72 +521,98 @@
           "conditions": {
             "maxAge": 13
           }
-        }
-      ]
-    },
-    "luxury-twin-summer": {
-      "name": "Luxury twin bed - high season",
-      "description": "High season price for luxury twin bed",
-      "currency": "EUR",
-      "price": 150,
-      "roomTypeIds": ["luxury-twin-bed"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-09-30"
-      },
-      "availableForTravel": {
-        "from": "2018-05-01",
-        "to": "2018-09-30"
-      },
-      "modifiers": [
+        },
         {
-          "adjustment": -10,
+          "adjustment": -50,
           "conditions": {
+            "minOccupants": 2
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -55,
+          "conditions": {
+            "minOccupants": 2,
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31",
             "maxAge": 13
           }
         }
-      ],
-      "restrictions": {
-        "lengthOfStay": {
-          "min": 2
-        }
-      }
+      ]
     },
-    "luxury-kingsize-before-season": {
-      "name": "Luxury king size bed - before season",
-      "description": "Off season price for luxury king size bed",
+    "luxury-kingsize": {
+      "name": "Luxury king size bed",
+      "description": "Price per person per night for luxury king size bed",
       "currency": "EUR",
       "price": 120,
       "roomTypeIds": ["luxury-king-size-bed"],
       "availableForReservation": {
         "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "modifiers": [
-        {
-          "adjustment": -10,
-          "conditions": {
-            "maxAge": 13
-          }
-        }
-      ]
-    },
-    "luxury-kingsize-after-season": {
-      "name": "Luxury king size bed - after season",
-      "description": "Off season price for luxury king size bed",
-      "currency": "EUR",
-      "price": 120,
-      "roomTypeIds": ["luxury-king-size-bed"],
-      "availableForReservation": {
-        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-01",
+        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "modifiers": [
@@ -608,72 +621,98 @@
           "conditions": {
             "maxAge": 13
           }
-        }
-      ]
-    },
-    "luxury-kingsize-summer": {
-      "name": "Luxury king size bed - high season",
-      "description": "High season price for luxury king size bed",
-      "currency": "EUR",
-      "price": 150,
-      "roomTypeIds": ["luxury-king-size-bed"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-09-30"
-      },
-      "availableForTravel": {
-        "from": "2018-05-01",
-        "to": "2018-09-30"
-      },
-      "modifiers": [
+        },
         {
-          "adjustment": -10,
+          "adjustment": -50,
           "conditions": {
+            "minOccupants": 2
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -55,
+          "conditions": {
+            "minOccupants": 2,
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31",
             "maxAge": 13
           }
         }
-      ],
-      "restrictions": {
-        "lengthOfStay": {
-          "min": 2
-        }
-      }
+      ]
     },
-    "presidential-suite-before-season": {
-      "name": "Presidential suite - before season",
-      "description": "Off season price for the presidential suite",
+    "presidential-suite": {
+      "name": "Presidential suite",
+      "description": "Price per person per night for the presidential suite",
       "currency": "EUR",
-      "price": 240,
+      "price": 200,
       "roomTypeIds": ["presidential-suite"],
       "availableForReservation": {
         "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-04-30"
-      },
-      "modifiers": [
-        {
-          "adjustment": -10,
-          "conditions": {
-            "maxAge": 13
-          }
-        }
-      ]
-    },
-    "presidential-suite-after-season": {
-      "name": "Presidential suite - after season",
-      "description": "Off season price for the presidential suite",
-      "currency": "EUR",
-      "price": 240,
-      "roomTypeIds": ["presidential-suite"],
-      "availableForReservation": {
-        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "availableForTravel": {
-        "from": "2018-10-01",
+        "from": "2018-01-01",
         "to": "2018-12-31"
       },
       "modifiers": [
@@ -682,27 +721,175 @@
           "conditions": {
             "maxAge": 13
           }
-        }
-      ]
-    },
-    "presidential-suite-summer": {
-      "name": "Presidential suite - high season",
-      "description": "High season price for the presidential suite",
-      "currency": "EUR",
-      "price": 300,
-      "roomTypeIds": ["presidential-suite"],
-      "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-09-30"
-      },
-      "availableForTravel": {
-        "from": "2018-05-01",
-        "to": "2018-09-30"
-      },
-      "modifiers": [
+        },
         {
-          "adjustment": -10,
+          "adjustment": -50,
           "conditions": {
+            "minOccupants": 2
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 3
+          }
+        },
+        {
+          "adjustment": -70,
+          "conditions": {
+            "minOccupants": 4
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -20,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -30,
+          "conditions": {
+            "from": "2018-10-01",
+            "to": "2018-12-31",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -55,
+          "conditions": {
+            "minOccupants": 2,
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -60,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 2,
+            "from": "2018-10-01",
+            "to": "2018-12-31",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -65,
+          "conditions": {
+            "minOccupants": 3,
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -70,
+          "conditions": {
+            "minOccupants": 3,
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -70,
+          "conditions": {
+            "minOccupants": 3,
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -75,
+          "conditions": {
+            "minOccupants": 3,
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -75,
+          "conditions": {
+            "minOccupants": 3,
+            "from": "2018-10-01",
+            "to": "2018-12-31",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -80,
+          "conditions": {
+            "minOccupants": 4,
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -75,
+          "conditions": {
+            "minOccupants": 4,
+            "from": "2018-01-01",
+            "to": "2018-04-30"
+          }
+        },
+        {
+          "adjustment": -75,
+          "conditions": {
+            "minOccupants": 4,
+            "from": "2018-10-01",
+            "to": "2018-12-31"
+          }
+        },
+        {
+          "adjustment": -85,
+          "conditions": {
+            "minOccupants": 4,
+            "from": "2018-01-01",
+            "to": "2018-04-30",
+            "maxAge": 13
+          }
+        },
+        {
+          "adjustment": -85,
+          "conditions": {
+            "minOccupants": 4,
+            "from": "2018-10-01",
+            "to": "2018-12-31",
             "maxAge": 13
           }
         }
