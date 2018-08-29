@@ -78,3 +78,10 @@ cd scripts/utils
 
 After the script finishes, a local singleton swarm node should
 be running and listening for HTTP traffic on the port 8500.
+
+## License
+
+For license information, see the attached "LICENSE" file. All
+images have been obtained from [Pixabay](https://pixabay.com)
+and are supposed to be in the Public Domain (Creative Commons
+CC0).
