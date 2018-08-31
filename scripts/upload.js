@@ -88,9 +88,15 @@ function uploadHotel (rawData, images, accessKey) {
       }, (response) => {
         response.on('data', chunk => responseData.push(chunk));
         response.on('end', () => {
+          if (response.statusCode === 524) {
+            // Do not fail on HTTP 524 as the data is most
+            // likely correctly uploaded, it just takes longer
+            // than Cloudflare was willing to wait.
+            return resolve("Cloudflare timeout; hotel address unknown.");
+          }
           if (response.statusCode > 299) {
             log(String(Buffer.concat(responseData)));
-            reject(new Error(`Error ${response.statusCode}`));
+            return reject(new Error(`Error ${response.statusCode}`));
           }
           resolve(JSON.parse(String(Buffer.concat(responseData))).address);
         });
