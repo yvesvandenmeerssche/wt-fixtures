@@ -26,7 +26,7 @@ npm install chance
 
 Finally, make sure you have access to a running Swarm node
 (e.g. via https://swarm-gateways.net/) and a WT Write API instance
-(version 0.2.0 is assumed) pointing to the same Swarm network.
+(version 0.4.0 is assumed) pointing to the same Swarm network.
 
 ## Uploading curated data.
 

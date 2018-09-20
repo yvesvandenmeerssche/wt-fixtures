@@ -23,11 +23,11 @@
     "timezone": "Europe/Bucharest",
     "currency": "EUR",
     "amenities": [
-       "restaurant",
-       "sauna",
-       "gym",
-       "parking",
-       "wifi"
+      "restaurant",
+      "sauna",
+      "gym",
+      "parking",
+      "wifi"
     ],
     "images": [
       "building.jpg",
@@ -201,7 +201,9 @@
       "description": "Price for a single room",
       "currency": "EUR",
       "price": 75,
-      "roomTypeIds": ["single-room"],
+      "roomTypeIds": [
+        "single-room"
+      ],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-12-31"
@@ -254,7 +256,9 @@
       "description": "Price per person per night for twin bed",
       "currency": "EUR",
       "price": 80,
-      "roomTypeIds": ["twin-bed"],
+      "roomTypeIds": [
+        "twin-bed"
+      ],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-12-31"
@@ -354,7 +358,9 @@
       "description": "Price per person per night for king size bed",
       "currency": "EUR",
       "price": 80,
-      "roomTypeIds": ["king-size-bed"],
+      "roomTypeIds": [
+        "king-size-bed"
+      ],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-12-31"
@@ -454,7 +460,9 @@
       "description": "Price per person per night for a luxury single room",
       "currency": "EUR",
       "price": 100,
-      "roomTypeIds": ["luxury-single-room"],
+      "roomTypeIds": [
+        "luxury-single-room"
+      ],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-12-31"
@@ -507,7 +515,9 @@
       "description": "Price per person per night for luxury twin bed",
       "currency": "EUR",
       "price": 120,
-      "roomTypeIds": ["luxury-twin-bed"],
+      "roomTypeIds": [
+        "luxury-twin-bed"
+      ],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-12-31"
@@ -607,7 +617,9 @@
       "description": "Price per person per night for luxury king size bed",
       "currency": "EUR",
       "price": 120,
-      "roomTypeIds": ["luxury-king-size-bed"],
+      "roomTypeIds": [
+        "luxury-king-size-bed"
+      ],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-12-31"
@@ -707,7 +719,9 @@
       "description": "Price per person per night for the presidential suite",
       "currency": "EUR",
       "price": 200,
-      "roomTypeIds": ["presidential-suite"],
+      "roomTypeIds": [
+        "presidential-suite"
+      ],
       "availableForReservation": {
         "from": "2018-01-01",
         "to": "2018-12-31"
@@ -899,6 +913,1118 @@
         "lengthOfStay": {
           "min": 2
         }
+      }
+    }
+  },
+  "availability": {
+    "latestSnapshot": {
+      "availability": {
+        "single-room": [
+          {
+            "date": "2018-08-21",
+            "quantity": 28
+          },
+          {
+            "date": "2018-08-22",
+            "quantity": 21
+          },
+          {
+            "date": "2018-08-23",
+            "quantity": 28,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-24",
+            "quantity": 9
+          },
+          {
+            "date": "2018-08-25",
+            "quantity": 26,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-26",
+            "quantity": 8
+          },
+          {
+            "date": "2018-08-27",
+            "quantity": 13
+          },
+          {
+            "date": "2018-08-28",
+            "quantity": 21
+          },
+          {
+            "date": "2018-08-29",
+            "quantity": 12
+          },
+          {
+            "date": "2018-08-30",
+            "quantity": 27
+          },
+          {
+            "date": "2018-08-31",
+            "quantity": 16,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-01",
+            "quantity": 30
+          },
+          {
+            "date": "2018-09-02",
+            "quantity": 28,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-03",
+            "quantity": 24
+          },
+          {
+            "date": "2018-09-04",
+            "quantity": 10,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-05",
+            "quantity": 7
+          },
+          {
+            "date": "2018-09-06",
+            "quantity": 14
+          },
+          {
+            "date": "2018-09-07",
+            "quantity": 7
+          },
+          {
+            "date": "2018-09-08",
+            "quantity": 8,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-09",
+            "quantity": 21,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-10",
+            "quantity": 13
+          },
+          {
+            "date": "2018-09-11",
+            "quantity": 25
+          },
+          {
+            "date": "2018-09-12",
+            "quantity": 13
+          },
+          {
+            "date": "2018-09-13",
+            "quantity": 26
+          }
+        ],
+        "twin-bed": [
+          {
+            "date": "2018-08-21",
+            "quantity": 5,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-22",
+            "quantity": 23
+          },
+          {
+            "date": "2018-08-23",
+            "quantity": 23,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-24",
+            "quantity": 24,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-25",
+            "quantity": 25,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-26",
+            "quantity": 5,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-27",
+            "quantity": 8
+          },
+          {
+            "date": "2018-08-28",
+            "quantity": 8,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-29",
+            "quantity": 28
+          },
+          {
+            "date": "2018-08-30",
+            "quantity": 24,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-31",
+            "quantity": 17
+          },
+          {
+            "date": "2018-09-01",
+            "quantity": 19,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-02",
+            "quantity": 15
+          },
+          {
+            "date": "2018-09-03",
+            "quantity": 21,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-04",
+            "quantity": 12
+          },
+          {
+            "date": "2018-09-05",
+            "quantity": 6,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-06",
+            "quantity": 30
+          },
+          {
+            "date": "2018-09-07",
+            "quantity": 16
+          },
+          {
+            "date": "2018-09-08",
+            "quantity": 13,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-09",
+            "quantity": 18
+          },
+          {
+            "date": "2018-09-10",
+            "quantity": 30,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-11",
+            "quantity": 10,
+            "restrictions": {
+              "noArrival": true
+            }
+          }
+        ],
+        "king-size-bed": [
+          {
+            "date": "2018-08-21",
+            "quantity": 15,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-22",
+            "quantity": 22,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-23",
+            "quantity": 28,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-24",
+            "quantity": 30
+          },
+          {
+            "date": "2018-08-25",
+            "quantity": 9,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-26",
+            "quantity": 9
+          },
+          {
+            "date": "2018-08-27",
+            "quantity": 19,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-28",
+            "quantity": 15,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-29",
+            "quantity": 4,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-30",
+            "quantity": 25,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-31",
+            "quantity": 0,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-01",
+            "quantity": 29,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-02",
+            "quantity": 21,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-03",
+            "quantity": 10,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-04",
+            "quantity": 22,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-05",
+            "quantity": 23
+          },
+          {
+            "date": "2018-09-06",
+            "quantity": 16
+          },
+          {
+            "date": "2018-09-07",
+            "quantity": 23,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-08",
+            "quantity": 21
+          },
+          {
+            "date": "2018-09-09",
+            "quantity": 0
+          },
+          {
+            "date": "2018-09-10",
+            "quantity": 26,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-11",
+            "quantity": 15,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-12",
+            "quantity": 11,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-13",
+            "quantity": 26,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-14",
+            "quantity": 11,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-15",
+            "quantity": 0,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-16",
+            "quantity": 22
+          },
+          {
+            "date": "2018-09-17",
+            "quantity": 10,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-18",
+            "quantity": 24,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-19",
+            "quantity": 20,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-20",
+            "quantity": 17
+          },
+          {
+            "date": "2018-09-21",
+            "quantity": 18
+          },
+          {
+            "date": "2018-09-22",
+            "quantity": 11,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-23",
+            "quantity": 7
+          },
+          {
+            "date": "2018-09-24",
+            "quantity": 7
+          },
+          {
+            "date": "2018-09-25",
+            "quantity": 4,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-26",
+            "quantity": 27
+          }
+        ],
+        "luxury-single-room": [
+          {
+            "date": "2018-08-21",
+            "quantity": 11,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-22",
+            "quantity": 3
+          },
+          {
+            "date": "2018-08-23",
+            "quantity": 21
+          },
+          {
+            "date": "2018-08-24",
+            "quantity": 13,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-25",
+            "quantity": 13
+          },
+          {
+            "date": "2018-08-26",
+            "quantity": 21,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-27",
+            "quantity": 19,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-28",
+            "quantity": 12,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-29",
+            "quantity": 18,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-30",
+            "quantity": 13
+          },
+          {
+            "date": "2018-08-31",
+            "quantity": 9,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-01",
+            "quantity": 22,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-02",
+            "quantity": 15
+          },
+          {
+            "date": "2018-09-03",
+            "quantity": 4,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-04",
+            "quantity": 22,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-05",
+            "quantity": 16,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-06",
+            "quantity": 23,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-07",
+            "quantity": 19,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-08",
+            "quantity": 6
+          },
+          {
+            "date": "2018-09-09",
+            "quantity": 10,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-10",
+            "quantity": 10
+          },
+          {
+            "date": "2018-09-11",
+            "quantity": 1
+          },
+          {
+            "date": "2018-09-12",
+            "quantity": 14
+          },
+          {
+            "date": "2018-09-13",
+            "quantity": 1,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-14",
+            "quantity": 28,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-15",
+            "quantity": 6,
+            "restrictions": {
+              "noDeparture": true
+            }
+          }
+        ],
+        "luxury-twin-bed": [
+          {
+            "date": "2018-08-21",
+            "quantity": 17,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-22",
+            "quantity": 2
+          },
+          {
+            "date": "2018-08-23",
+            "quantity": 15,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-24",
+            "quantity": 12
+          },
+          {
+            "date": "2018-08-25",
+            "quantity": 22,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-26",
+            "quantity": 7
+          },
+          {
+            "date": "2018-08-27",
+            "quantity": 22,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-28",
+            "quantity": 22,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-29",
+            "quantity": 18
+          },
+          {
+            "date": "2018-08-30",
+            "quantity": 24,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-31",
+            "quantity": 7,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-01",
+            "quantity": 21,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-02",
+            "quantity": 27
+          },
+          {
+            "date": "2018-09-03",
+            "quantity": 19,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-04",
+            "quantity": 19
+          },
+          {
+            "date": "2018-09-05",
+            "quantity": 2
+          },
+          {
+            "date": "2018-09-06",
+            "quantity": 1
+          },
+          {
+            "date": "2018-09-07",
+            "quantity": 1
+          },
+          {
+            "date": "2018-09-08",
+            "quantity": 6
+          },
+          {
+            "date": "2018-09-09",
+            "quantity": 17,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-10",
+            "quantity": 10
+          },
+          {
+            "date": "2018-09-11",
+            "quantity": 2,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-12",
+            "quantity": 4,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-13",
+            "quantity": 6,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-14",
+            "quantity": 29
+          },
+          {
+            "date": "2018-09-15",
+            "quantity": 22
+          },
+          {
+            "date": "2018-09-16",
+            "quantity": 7
+          },
+          {
+            "date": "2018-09-17",
+            "quantity": 14,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-18",
+            "quantity": 22
+          },
+          {
+            "date": "2018-09-19",
+            "quantity": 13,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-20",
+            "quantity": 20,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-21",
+            "quantity": 18,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-22",
+            "quantity": 5,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-23",
+            "quantity": 27,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-24",
+            "quantity": 21
+          }
+        ],
+        "luxury-king-size-bed": [
+          {
+            "date": "2018-08-21",
+            "quantity": 23
+          },
+          {
+            "date": "2018-08-22",
+            "quantity": 2
+          },
+          {
+            "date": "2018-08-23",
+            "quantity": 24
+          },
+          {
+            "date": "2018-08-24",
+            "quantity": 12
+          },
+          {
+            "date": "2018-08-25",
+            "quantity": 12,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-26",
+            "quantity": 1,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-27",
+            "quantity": 7
+          },
+          {
+            "date": "2018-08-28",
+            "quantity": 29,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-29",
+            "quantity": 16
+          },
+          {
+            "date": "2018-08-30",
+            "quantity": 7
+          },
+          {
+            "date": "2018-08-31",
+            "quantity": 10,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-01",
+            "quantity": 7,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-02",
+            "quantity": 30,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-03",
+            "quantity": 1,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-04",
+            "quantity": 4,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-05",
+            "quantity": 1
+          },
+          {
+            "date": "2018-09-06",
+            "quantity": 5
+          },
+          {
+            "date": "2018-09-07",
+            "quantity": 18
+          },
+          {
+            "date": "2018-09-08",
+            "quantity": 17,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-09",
+            "quantity": 16
+          },
+          {
+            "date": "2018-09-10",
+            "quantity": 11,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-11",
+            "quantity": 2,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-12",
+            "quantity": 1,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-09-13",
+            "quantity": 8
+          },
+          {
+            "date": "2018-09-14",
+            "quantity": 25
+          }
+        ],
+        "presidential-suite": [
+          {
+            "date": "2018-08-21",
+            "quantity": 3,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-22",
+            "quantity": 14
+          },
+          {
+            "date": "2018-08-23",
+            "quantity": 27,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-24",
+            "quantity": 14
+          },
+          {
+            "date": "2018-08-25",
+            "quantity": 25,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-26",
+            "quantity": 1
+          },
+          {
+            "date": "2018-08-27",
+            "quantity": 6
+          },
+          {
+            "date": "2018-08-28",
+            "quantity": 30,
+            "restrictions": {
+              "noArrival": true
+            }
+          },
+          {
+            "date": "2018-08-29",
+            "quantity": 15
+          },
+          {
+            "date": "2018-08-30",
+            "quantity": 20,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-08-31",
+            "quantity": 11
+          },
+          {
+            "date": "2018-09-01",
+            "quantity": 22
+          },
+          {
+            "date": "2018-09-02",
+            "quantity": 14
+          },
+          {
+            "date": "2018-09-03",
+            "quantity": 19,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-04",
+            "quantity": 11,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-05",
+            "quantity": 1
+          },
+          {
+            "date": "2018-09-06",
+            "quantity": 21
+          },
+          {
+            "date": "2018-09-07",
+            "quantity": 26,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-08",
+            "quantity": 25
+          },
+          {
+            "date": "2018-09-09",
+            "quantity": 25
+          },
+          {
+            "date": "2018-09-10",
+            "quantity": 23,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-11",
+            "quantity": 18,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-12",
+            "quantity": 26
+          },
+          {
+            "date": "2018-09-13",
+            "quantity": 17,
+            "restrictions": {
+              "noDeparture": true
+            }
+          },
+          {
+            "date": "2018-09-14",
+            "quantity": 6
+          },
+          {
+            "date": "2018-09-15",
+            "quantity": 9
+          }
+        ]
       }
     }
   }

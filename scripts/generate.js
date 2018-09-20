@@ -68,7 +68,7 @@ function generateRoomType () {
 
 function generateCancellationPolicies () {
   const policies = [],
-    currentYear = (new Date()).getYear() + 1900;
+    currentYear = (new Date()).getFullYear();
   let deadline = 1,
     amount = 0;
 
@@ -123,7 +123,7 @@ function generateDescription () {
 }
 
 function generateRatePlan (roomTypeId, occupancy) {
-  const currentYear = (new Date()).getYear() + 1900,
+  const currentYear = (new Date()).getFullYear(),
     modifierConditions = [
       { 'maxAge': Chance.natural({ min: 1, max: 20 }) },
       { 'minLengthOfStay': Chance.natural({ min: 3, max: 120 }) },
@@ -183,11 +183,43 @@ function generateRatePlans (description) {
   return ratePlans;
 }
 
+function generateAvailability (description) {
+  const availability = {},
+    roomTypeIds = Object.keys(description.roomTypes);
+  for (let roomTypeId of roomTypeIds) {
+    let startDate = new Date();
+    startDate.setMonth(startDate.getMonth() - 1);
+    availability[roomTypeId] = [];
+    for (let i = 0; i < Chance.natural({ min: 20, max: 100}); i++) {
+      startDate.setDate(startDate.getDate() + 1);
+      let dailyAvailability = {
+        date: `${startDate.getFullYear()}-${('0' + (startDate.getMonth()+1)).slice(-2)}-${('0' + startDate.getDate()).slice(-2)}`,
+        quantity: Chance.natural({ min: 0, max: 30}),
+      };
+      if (Chance.bool()) {
+        dailyAvailability['restrictions'] = {};
+        if (Chance.bool()) {
+          dailyAvailability['restrictions'].noArrival = true;
+        } else {
+          dailyAvailability['restrictions'].noDeparture = true;
+        }
+      }
+      availability[roomTypeId].push(dailyAvailability);
+    }
+  }
+  return {
+    latestSnapshot: {
+      availability
+    }
+  };
+}
+
 function generateHotelDefinition () {
   const description = generateDescription();
   return {
     'description': description,
     'ratePlans': generateRatePlans(description),
+    'availability': generateAvailability(description),
   };
 }
 
