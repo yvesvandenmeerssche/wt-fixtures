@@ -1,2 +1,4 @@
 scripts/utils/swarm_data
+scripts/node_modules
+scripts/package-lock.json
 data/generated
