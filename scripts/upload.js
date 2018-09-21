@@ -103,7 +103,7 @@ function preprocessHotel (data, images) {
 /**
  * Upload hotel via the WT Write API.
  */
-async function uploadHotel (rawData, images, accessKey) {
+async function createHotel (rawData, images, accessKey) {
   const hotelData = JSON.stringify(preprocessHotel(rawData, images)),
     writeApi = config.WT_WRITE_API,
     protocol = writeApi.method,
@@ -119,6 +119,25 @@ async function uploadHotel (rawData, images, accessKey) {
     data = await sendRequest(protocol, method, hostname, port, path, headers, hotelData);
 
     return JSON.parse(String(data)).address;
+}
+
+/**
+ * Update a hotel via WT Write API
+ */
+async function updateHotel (address, rawData, images, accessKey) {
+  const hotelData = JSON.stringify(preprocessHotel(rawData, images)),
+    writeApi = config.WT_WRITE_API,
+    protocol = writeApi.method,
+    method = 'PATCH',
+    hostname = writeApi.host,
+    port = writeApi.port,
+    path = `/hotels/${address}`,
+    headers = {
+      'Content-Type': 'application/json',
+      'X-Access-Key': accessKey,
+      'X-Wallet-Password': config.WT_WRITE_API_WALLET_PASSWORD,
+    };
+    return sendRequest(protocol, method, hostname, port, path, headers, hotelData);
 }
 
 /**
@@ -176,18 +195,7 @@ async function verifyUpload (uploadedHotels) {
   }
 }
 
-async function main () {
-  const dataset = process.argv[2];
-
-  let dataPath;
-  if (dataset === 'curated') {
-    dataPath = config.DATA_PATH_CURATED;
-  } else if (dataset === 'generated') {
-    dataPath = config.DATA_PATH_GENERATED;
-  } else {
-    throw new Error('Usage: node upload.js [curated|generated]');
-  }
-
+async function getAccessKey() {
   let accessKey;
   if (!config.WT_WRITE_API_ACCESS_KEY) {
     log('Creating a new account in WT write API...');
@@ -196,7 +204,20 @@ async function main () {
   } else {
     accessKey = config.WT_WRITE_API_ACCESS_KEY;
   }
+  return accessKey;
+}
 
+async function bulkCreate (dataset) {
+  let dataPath;
+  if (dataset === 'curated') {
+    dataPath = config.DATA_PATH_CURATED;
+  } else if (dataset === 'generated') {
+    dataPath = config.DATA_PATH_GENERATED;
+  } else {
+    throw new Error('Usage: node upload.js bulk-create [curated|generated]');
+  }
+
+  const accessKey = await getAccessKey();
   const uploadedHotels = {};
   const hotels = fs.readdirSync(dataPath).filter((x) =>
     fs.lstatSync(path.join(dataPath, x)).isDirectory());
@@ -213,13 +234,53 @@ async function main () {
     }
     log('Uploading hotel data');
     const hotelData = require(path.join(hotelPath, 'definition.json')),
-      hotelAddress = await uploadHotel(hotelData, images, accessKey);
+      hotelAddress = await createHotel(hotelData, images, accessKey);
     uploadedHotels[hotel].address = hotelAddress;
     log(`\t${hotelAddress}`);
   }
 
   if (config.VERIFY_UPLOAD) {
     await verifyUpload(uploadedHotels);
+  }
+}
+
+async function update (hotelPath, address) {
+  if (! hotelPath && ! address) {
+    throw new Error('Usage: node upload.js update <path-to-hotel-dir> <address>');
+  }
+  const accessKey = await getAccessKey();
+  const uploadedHotels = {};
+  const imagePath = path.join(hotelPath, 'images'),
+    images = {};
+  log(`\n\n=== Processing ${hotelPath} ===\n`);
+  uploadedHotels[hotelPath] = { images: [], data: null };
+  for (let image of fs.readdirSync(imagePath)) {
+    log(`Uploading ${image}`);
+    images[image] = await uploadImage(path.join(imagePath, image));
+    uploadedHotels[hotelPath].images.push(images[image]);
+  }
+  log('Uploading hotel data');
+  const hotelData = require(path.join(hotelPath, 'definition.json'));
+  await updateHotel(address, hotelData, images, accessKey);
+  uploadedHotels[hotelPath].address = address;
+  log(`\t${address}`);
+
+  if (config.VERIFY_UPLOAD) {
+    await verifyUpload(uploadedHotels);
+  }
+}
+
+async function main () {
+  const mode = process.argv[2];
+  if (mode === 'bulk-create') {
+    const dataset = process.argv[3];
+    bulkCreate(dataset);
+  } else if (mode === 'update') {
+    const datapath = process.argv[3];
+    const address = process.argv[4];
+    update(datapath, address);
+  } else {
+    throw new Error('Usage: node upload.js [bulk-create|update]');
   }
 }
 

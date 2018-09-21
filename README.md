@@ -41,7 +41,7 @@ to WT:
 
 ```
 cd scripts
-node upload.js curated
+node upload.js bulk-create curated
 ```
 
 ## Generating hotel data
@@ -56,15 +56,31 @@ contain a data directory for each generated hotel. All hotels
 are located within 45.5 - 47.5 lat and 22.5 - 24.5 long to
 simulate a metropolitan area.
 
-## Uploading generated data.
+## Uploading generated data
 
 Verify the settings in `scripts/config.js` as described in the
 `Uploading curated data` section. Then run the following:
 
 ```
 cd scripts
-node upload.js generated
+node upload.js bulk-create generated
 ```
+
+## Updating a hotel data
+Verify the settings in `scripts/config.js` as described in the
+`Uploading curated data` section. Then run the following:
+
+```
+cd scripts
+node upload.js update /path/to/hotel/directory 0xExisting-hotel-address
+```
+
+For example if you want to update Hotel Mazurka, you would run
+```
+cd scripts
+node upload.js update ../data/curated/hotel-mazurka/ 0x030eA8A18069BF6a0EaE6515c1A46AbD73261C5C
+```
+
 
 ## Running a local swarm node
 
