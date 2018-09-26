@@ -67,6 +67,22 @@ cd scripts
 node upload.js bulk-create generated
 ```
 
+## Regenerating availability data
+
+If you need to set new randomized availability data (for example
+because they are too old now), you can change them in the original
+`definition.json` document. You might then want to update the hotel
+in the platform.
+
+Verify the settings in `scripts/config.js` as described in the
+`Uploading curated data` section. Then run the following:
+
+```
+cd scripts
+node regenerate-availability.js /path/to/hotel/directory
+```
+
+
 ## Updating hotel data
 Verify the settings in `scripts/config.js` as described in the
 `Uploading curated data` section. Then run the following:
