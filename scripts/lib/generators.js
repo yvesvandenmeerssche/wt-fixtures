@@ -232,8 +232,12 @@ function generateHotelDefinition () {
 }
 
 module.exports = {
-  generateHotelDefinition,
+  generateRoomType,
+  generateCancellationPolicies,
+  generateDescription,
+  generateRatePlan,
   generateRatePlans,
   generateAvailability,
+  generateHotelDefinition,
   IMAGES,
 }
