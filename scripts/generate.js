@@ -194,7 +194,7 @@ function generateAvailability (description) {
       startDate.setDate(startDate.getDate() + 1);
       let dailyAvailability = {
         date: `${startDate.getFullYear()}-${('0' + (startDate.getMonth()+1)).slice(-2)}-${('0' + startDate.getDate()).slice(-2)}`,
-        quantity: Chance.natural({ min: 0, max: 30}),
+        quantity: Chance.natural({ min: 0, max: description.roomTypes[roomTypeId].totalQuantity}),
       };
       if (Chance.bool()) {
         dailyAvailability['restrictions'] = {};
