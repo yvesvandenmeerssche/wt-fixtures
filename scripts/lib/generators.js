@@ -74,7 +74,7 @@ function generateCancellationPolicies () {
 
   for (let i = 0; i < Chance.natural({ max: 4 }); i++) {
     policies.push({
-      'form': `${startDate.getFullYear()}-${('0' + (startDate.getMonth()+1)).slice(-2)}-${('0' + startDate.getDate()).slice(-2)}`,
+      'from': `${startDate.getFullYear()}-${('0' + (startDate.getMonth()+1)).slice(-2)}-${('0' + startDate.getDate()).slice(-2)}`,
       'to': `${endDate.getFullYear()}-${('0' + (endDate.getMonth()+1)).slice(-2)}-${('0' + endDate.getDate()).slice(-2)}`,
       'deadline': Chance.natural({ min: deadline, max: deadline + 14 }),
       'amount': 100 - Chance.natural({ min: amount, max: Math.min(100, amount + 25) }),
@@ -149,11 +149,11 @@ function generateRatePlan (roomTypeId, occupancy) {
     'price': Chance.natural({ min: 20, max: 400 }),
     'roomTypeIds': [roomTypeId],
     'availableForReservation': {
-      'form': `${startDateRes.getFullYear()}-${('0' + (startDateRes.getMonth()+1)).slice(-2)}-${('0' + startDateRes.getDate()).slice(-2)}`,
+      'from': `${startDateRes.getFullYear()}-${('0' + (startDateRes.getMonth()+1)).slice(-2)}-${('0' + startDateRes.getDate()).slice(-2)}`,
       'to': `${endDateRes.getFullYear()}-${('0' + (endDateRes.getMonth()+1)).slice(-2)}-${('0' + endDateRes.getDate()).slice(-2)}`,
     },
     'availableForTravel': {
-      'form': `${startDateTrav.getFullYear()}-${('0' + (startDateTrav.getMonth()+1)).slice(-2)}-${('0' + startDateTrav.getDate()).slice(-2)}`,
+      'from': `${startDateTrav.getFullYear()}-${('0' + (startDateTrav.getMonth()+1)).slice(-2)}-${('0' + startDateTrav.getDate()).slice(-2)}`,
       'to': `${endDateTrav.getFullYear()}-${('0' + (endDateTrav.getMonth()+1)).slice(-2)}-${('0' + endDateTrav.getDate()).slice(-2)}`,
     },
     'modifiers': [
