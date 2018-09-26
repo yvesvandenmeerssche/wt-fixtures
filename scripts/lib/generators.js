@@ -64,14 +64,18 @@ function generateRoomType () {
 
 function generateCancellationPolicies () {
   const policies = [],
-    currentYear = (new Date()).getFullYear();
+    startDate = new Date(),
+    endDate = new Date();
   let deadline = 1,
     amount = 0;
 
+  startDate.setDate(1);
+  endDate.setDate((new Date()).getDate() + Chance.natural({ min: 30, max: 365 }));
+
   for (let i = 0; i < Chance.natural({ max: 4 }); i++) {
     policies.push({
-      'from': `${currentYear}-01-01`,
-      'to': `${currentYear}-12-31`,
+      'form': `${startDate.getFullYear()}-${('0' + (startDate.getMonth()+1)).slice(-2)}-${('0' + startDate.getDate()).slice(-2)}`,
+      'to': `${endDate.getFullYear()}-${('0' + (endDate.getMonth()+1)).slice(-2)}-${('0' + endDate.getDate()).slice(-2)}`,
       'deadline': Chance.natural({ min: deadline, max: deadline + 14 }),
       'amount': 100 - Chance.natural({ min: amount, max: Math.min(100, amount + 25) }),
     });
@@ -119,7 +123,10 @@ function generateDescription () {
 }
 
 function generateRatePlan (roomTypeId, occupancy) {
-  const currentYear = (new Date()).getFullYear(),
+  const startDateRes = new Date(),
+    endDateRes = new Date(),
+    startDateTrav = new Date(),
+    endDateTrav = new Date(),
     modifierConditions = [
       { 'maxAge': Chance.natural({ min: 1, max: 20 }) },
       { 'minLengthOfStay': Chance.natural({ min: 3, max: 120 }) },
@@ -130,6 +137,11 @@ function generateRatePlan (roomTypeId, occupancy) {
     });
   }
 
+  startDateRes.setDate(1);
+  endDateRes.setDate((new Date()).getDate() + Chance.natural({ min: 30, max: 365 }));
+  startDateTrav.setDate(1);
+  endDateTrav.setDate((new Date()).getDate() + Chance.natural({ min: 30, max: 365 }));
+
   return {
     'name': Chance.sentence({ words: Chance.natural({ min: 1, max: 4 }) }),
     'description': Chance.paragraph(),
@@ -137,12 +149,12 @@ function generateRatePlan (roomTypeId, occupancy) {
     'price': Chance.natural({ min: 20, max: 400 }),
     'roomTypeIds': [roomTypeId],
     'availableForReservation': {
-      'from': `${currentYear}-01-01`,
-      'to': `${currentYear}-12-31`,
+      'form': `${startDateRes.getFullYear()}-${('0' + (startDateRes.getMonth()+1)).slice(-2)}-${('0' + startDateRes.getDate()).slice(-2)}`,
+      'to': `${endDateRes.getFullYear()}-${('0' + (endDateRes.getMonth()+1)).slice(-2)}-${('0' + endDateRes.getDate()).slice(-2)}`,
     },
     'availableForTravel': {
-      'from': `${currentYear}-01-01`,
-      'to': `${currentYear}-12-31`,
+      'form': `${startDateTrav.getFullYear()}-${('0' + (startDateTrav.getMonth()+1)).slice(-2)}-${('0' + startDateTrav.getDate()).slice(-2)}`,
+      'to': `${endDateTrav.getFullYear()}-${('0' + (endDateTrav.getMonth()+1)).slice(-2)}-${('0' + endDateTrav.getDate()).slice(-2)}`,
     },
     'modifiers': [
       {
@@ -186,7 +198,7 @@ function generateAvailability (description) {
     let startDate = new Date();
     startDate.setMonth(startDate.getMonth() - 1);
     availability[roomTypeId] = [];
-    for (let i = 0; i < Chance.natural({ min: 35, max: 150}); i++) {
+    for (let i = 0; i < Chance.natural({ min: 35, max: 365}); i++) {
       startDate.setDate(startDate.getDate() + 1);
       let dailyAvailability = {
         date: `${startDate.getFullYear()}-${('0' + (startDate.getMonth()+1)).slice(-2)}-${('0' + startDate.getDate()).slice(-2)}`,
