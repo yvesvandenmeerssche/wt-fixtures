@@ -28,7 +28,7 @@ Finally, make sure you have access to a running Swarm node
 (e.g. via https://swarm-gateways.net/) and a WT Write API instance
 (version 0.4.0 is assumed) pointing to the same Swarm network.
 
-## Uploading curated data.
+## Uploading curated data
 
 First of all, verify the settings in `scripts/config.js`. Among
 others, you should provide endpoints for:
@@ -67,10 +67,10 @@ cd scripts
 node upload.js bulk-create generated
 ```
 
-## Regenerating availability data
+## Regenerating time-based data
 
-If you need to set new randomized availability data (for example
-because they are too old now), you can change them in the original
+If you need to set new randomized time-based data (for example
+because they are too old now), you can replace them in the original
 `definition.json` document. You might then want to update the hotel
 in the platform.
 
@@ -79,11 +79,13 @@ Verify the settings in `scripts/config.js` as described in the
 
 ```
 cd scripts
-node regenerate-availability.js /path/to/hotel/directory
+node regenerate.js /path/to/hotel/directory cancellationPolicies
+node regenerate.js /path/to/hotel/directory ratePlans
+node regenerate.js /path/to/hotel/directory availability
 ```
 
 
-## Updating hotel data
+## Updating hotel data on network
 Verify the settings in `scripts/config.js` as described in the
 `Uploading curated data` section. Then run the following:
 
