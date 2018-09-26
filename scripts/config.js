@@ -20,4 +20,5 @@ module.exports = {
   WT_WRITE_API_WALLET_PASSWORD: 'windingtree',
   WT_WRITE_API_ACCESS_KEY: null, // If specified, account creation is skipped and an existing account is reused.
   VERIFY_UPLOAD: true, // Set to false for better upload speed and lower robustness.
+  WT_UPDATE_API: "http://localhost:8080/", // Optional - set to publish notifications there.
 };

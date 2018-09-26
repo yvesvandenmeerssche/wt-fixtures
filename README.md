@@ -35,6 +35,7 @@ others, you should provide endpoints for:
 
   - A running Swarm provider instance.
   - A running WT Write API instance.
+  - A running WT Update API instance.
 
 When you're done, do the following to upload the curated data
 to WT:
@@ -66,7 +67,7 @@ cd scripts
 node upload.js bulk-create generated
 ```
 
-## Updating a hotel data
+## Updating hotel data
 Verify the settings in `scripts/config.js` as described in the
 `Uploading curated data` section. Then run the following:
 

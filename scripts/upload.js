@@ -97,6 +97,9 @@ function preprocessHotel (data, images) {
     const roomType = data.description.roomTypes[roomTypeId];
     roomType.images = roomType.images.map(convert);
   }
+  if (config.WT_UPDATE_API) {
+    data.notifications = config.WT_UPDATE_API;
+  }
   return data;
 }
 
