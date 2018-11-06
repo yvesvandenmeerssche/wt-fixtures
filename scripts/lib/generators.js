@@ -216,9 +216,7 @@ function generateAvailability (description) {
     }
   }
   return {
-    latestSnapshot: {
-      availability
-    }
+    roomTypes: availability
   };
 }
 
