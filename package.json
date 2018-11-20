@@ -1,0 +1,19 @@
+{
+  "name": "@windingtree/wt-fixtures",
+  "version": "0.0.0",
+  "description": "Test data for the WT platform",
+  "main": "./scripts/bulk-create.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windingtree/wt-fixtures.git"
+  },
+  "author": "WT Dev Team <support@winidngtree.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/windingtree/wt-fixtures/issues"
+  },
+  "homepage": "https://github.com/windingtree/wt-fixtures#readme",
+  "dependencies": {
+    "chance": "^1.0.16"
+  }
+}

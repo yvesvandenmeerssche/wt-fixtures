@@ -14,14 +14,7 @@ Install the necessary node version, e.g. like this:
 ```
 nvm install
 nvm use
-```
-
-Then install the chance dependency (only needed for data
-generation):
-
-```
-cd scripts
-npm install chance
+npm install
 ```
 
 Finally, make sure you have access to a running Swarm node
