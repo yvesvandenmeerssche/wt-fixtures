@@ -15,8 +15,8 @@ function preprocessHotel (data, images) {
     const roomType = data.description.roomTypes[roomTypeId];
     roomType.images = roomType.images.map(convert);
   }
-  if (config.WT_UPDATE_API) {
-    data.notifications = config.WT_UPDATE_API;
+  if (config.WT_NOTIFICATION_API) {
+    data.notifications = config.WT_NOTIFICATION_API;
   }
   return data;
 }
