@@ -1,41 +1,17 @@
-const fs = require('fs'),
-  path = require('path'),
-  Chance = new (require('chance'))(),
+const path = require('path'),
   config = require('./config'),
-  generators = require('./lib/generators');
-
-function log (msg) {
-  console.log(msg);
-}
+  utils = require('./lib/utils'),
+  operations = require('./lib/operations');
 
 function main () {
   const hotelPath = process.argv[2];
   const what = process.argv[3];
-  if (!hotelPath || !what ||
-    (what !== 'availability' && what != 'cancellationPolicies' && what !== 'ratePlans')
-    ) {
-    throw new Error('Usage: node regenerate.js <path-to-hotel-dir> [availability|cancellationPolicies|ratePlans] ');
+  if (!hotelPath || !what) {
+    throw new Error('Usage: node regenerate.js <path-to-hotel-dir> [availability|cancellationPolicies|ratePlans|all] ');
   }
-  log(`Updating ${what} definition at ${hotelPath}`);
-  const hotelData = require(path.join(hotelPath, 'definition.json'));
-  if (!hotelData) {
-    throw new Error(`${hotelPath} contains broken definition.json`);
-  }
-  switch (what) {
-    case 'availability':
-      hotelData.availability = generators.generateAvailability(hotelData.description);
-      break;
-    case 'cancellationPolicies':
-      hotelData.description.cancellationPolicies = generators.generateCancellationPolicies();
-      break;
-    case 'ratePlans':
-      hotelData.ratePlans = generators.generateRatePlans(hotelData.description);
-      break;
-  }
-  
-  fs.writeFileSync(path.join(hotelPath, 'definition.json'),
-      JSON.stringify(hotelData, null, '  '));
-  log('Done.');
+  utils.log(`Updating ${what} definition at ${hotelPath}`);
+  operations.regenerateTimeBasedData(path.resolve(hotelPath), what);
+  utils.log('Done.');
 }
 
 main();

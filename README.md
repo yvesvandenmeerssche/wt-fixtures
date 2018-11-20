@@ -42,7 +42,7 @@ to WT:
 
 ```
 cd scripts
-node upload.js bulk-create curated
+node bulk-create.js curated
 ```
 
 ## Generating hotel data
@@ -64,7 +64,7 @@ Verify the settings in `scripts/config.js` as described in the
 
 ```
 cd scripts
-node upload.js bulk-create generated
+node bulk-create.js generated
 ```
 
 ## Regenerating time-based data
@@ -82,6 +82,7 @@ cd scripts
 node regenerate.js /path/to/hotel/directory cancellationPolicies
 node regenerate.js /path/to/hotel/directory ratePlans
 node regenerate.js /path/to/hotel/directory availability
+node regenerate.js /path/to/hotel/directory all
 ```
 
 
@@ -91,13 +92,13 @@ Verify the settings in `scripts/config.js` as described in the
 
 ```
 cd scripts
-node upload.js update /path/to/hotel/directory 0xExisting-hotel-address
+node update.js /path/to/hotel/directory 0xExisting-hotel-address
 ```
 
 For example if you want to update Hotel Mazurka, you would run
 ```
 cd scripts
-node upload.js update ../data/curated/hotel-mazurka/ 0x030eA8A18069BF6a0EaE6515c1A46AbD73261C5C
+node update.js ../data/curated/hotel-mazurka/ 0x030eA8A18069BF6a0EaE6515c1A46AbD73261C5C
 ```
 
 
