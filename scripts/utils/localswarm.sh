@@ -9,7 +9,7 @@ if [ $? -eq 0 ]; then
 fi
 
 BASE_DIR=`pwd`/swarm_data
-SWARM_VERSION="0.3.2-316fc7ec"
+SWARM_VERSION="0.3.6-58632d44"
 ARCHITECTURE=amd64
 BIN_DIR=$BASE_DIR/swarm-linux-$ARCHITECTURE-$SWARM_VERSION
 
