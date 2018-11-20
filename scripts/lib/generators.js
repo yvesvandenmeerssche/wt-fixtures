@@ -198,7 +198,7 @@ function generateAvailability (description) {
     let startDate = new Date();
     startDate.setMonth(startDate.getMonth() - 1);
     availability[roomTypeId] = [];
-    for (let i = 0; i < Chance.natural({ min: 35, max: 365}); i++) {
+    for (let i = 0; i < Chance.natural({ min: 90, max: 365}); i++) {
       startDate.setDate(startDate.getDate() + 1);
       let dailyAvailability = {
         date: `${startDate.getFullYear()}-${('0' + (startDate.getMonth()+1)).slice(-2)}-${('0' + startDate.getDate()).slice(-2)}`,
