@@ -77,7 +77,7 @@ async function updateHotel (address, rawData, images, accessKey) {
  * Create a new account in the configured WT Write API.
  */
 async function createAccount () {
-  const accountData = `{"wallet": ${config.WT_WRITE_API_WALLET}, "uploaders": {"root": {"swarm": {}}}}`,
+  const accountData = {"wallet": JSON.parse(config.WT_WRITE_API_WALLET), "uploaders": config.UPLOADERS},
     protocol = config.WT_WRITE_API.method,
     method = 'POST',
     hostname = config.WT_WRITE_API.host,
@@ -86,9 +86,8 @@ async function createAccount () {
     headers = {
       'Content-Type': 'application/json',
     },
-    data = await utils.sendRequest(protocol, method, hostname, port, path, headers, accountData);
-
-    return JSON.parse(String(data)).accessKey;
+    data = await utils.sendRequest(protocol, method, hostname, port, path, headers, JSON.stringify(accountData));
+  return JSON.parse(String(data)).accessKey;
 }
 
 module.exports = {
