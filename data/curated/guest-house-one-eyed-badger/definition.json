@@ -33,8 +33,8 @@
       "bar.jpg",
       "fireplace.jpg"
     ],
-    "roomTypes": {
-      "single-room": {
+    "roomTypes": [
+      {
         "name": "Single room",
         "description": "Room with a single bed",
         "totalQuantity": 8,
@@ -53,9 +53,10 @@
         ],
         "properties": {
           "nonSmoking": "none"
-        }
+        },
+        "id": "single-room"
       },
-      "twin-bed": {
+      {
         "name": "Twin bed",
         "description": "Room with a twin bed",
         "totalQuantity": 4,
@@ -74,9 +75,10 @@
         ],
         "properties": {
           "nonSmoking": "none"
-        }
+        },
+        "id": "twin-bed"
       },
-      "extra-view": {
+      {
         "name": "Extra view",
         "description": "Room with a balcony and an extra view of the Dragolm mountains (single bed only)",
         "totalQuantity": 2,
@@ -98,9 +100,10 @@
         ],
         "properties": {
           "nonSmoking": "none"
-        }
+        },
+        "id": "extra-view"
       }
-    },
+    ],
     "defaultCancellationAmount": 0,
     "cancellationPolicies": [
       {
@@ -117,8 +120,8 @@
       }
     ]
   },
-  "ratePlans": {
-    "single-room": {
+  "ratePlans": [
+    {
       "name": "Single room",
       "description": "Price per night for a standard single room.",
       "currency": "RON",
@@ -141,9 +144,10 @@
             "minLengthOfStay": 30
           }
         }
-      ]
+      ],
+      "id": "single-room"
     },
-    "twin-bed": {
+    {
       "name": "Twin bed",
       "description": "Price per person per night for a twin bed room.",
       "currency": "RON",
@@ -179,9 +183,10 @@
             "minOccupants": 2
           }
         }
-      ]
+      ],
+      "id": "twin-bed"
     },
-    "extra-view": {
+    {
       "name": "Extra view",
       "description": "Price for the room with an extra view and a balcony.",
       "currency": "RON",
@@ -204,403 +209,472 @@
             "minLengthOfStay": 30
           }
         }
-      ]
+      ],
+      "id": "extra-view"
     }
-  },
+  ],
   "availability": {
-    "roomTypes": {
-      "single-room": [
-        {
-          "date": "2018-08-21",
-          "quantity": 12,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-08-22",
-          "quantity": 20
-        },
-        {
-          "date": "2018-08-23",
-          "quantity": 22
-        },
-        {
-          "date": "2018-08-24",
-          "quantity": 13,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-08-25",
-          "quantity": 19,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-08-26",
-          "quantity": 24
-        },
-        {
-          "date": "2018-08-27",
-          "quantity": 8,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-08-28",
-          "quantity": 9,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-08-29",
-          "quantity": 23
-        },
-        {
-          "date": "2018-08-30",
-          "quantity": 13
-        },
-        {
-          "date": "2018-08-31",
-          "quantity": 19,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-09-01",
-          "quantity": 4
-        },
-        {
-          "date": "2018-09-02",
-          "quantity": 19
-        },
-        {
-          "date": "2018-09-03",
-          "quantity": 12
-        },
-        {
-          "date": "2018-09-04",
-          "quantity": 19
-        },
-        {
-          "date": "2018-09-05",
-          "quantity": 20,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-06",
-          "quantity": 10,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-07",
-          "quantity": 28
-        },
-        {
-          "date": "2018-09-08",
-          "quantity": 15
-        },
-        {
-          "date": "2018-09-09",
-          "quantity": 27
-        },
-        {
-          "date": "2018-09-10",
-          "quantity": 17,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-11",
-          "quantity": 16,
-          "restrictions": {
-            "noDeparture": true
-          }
-        }
-      ],
-      "twin-bed": [
-        {
-          "date": "2018-08-21",
-          "quantity": 11
-        },
-        {
-          "date": "2018-08-22",
-          "quantity": 3
-        },
-        {
-          "date": "2018-08-23",
-          "quantity": 5
-        },
-        {
-          "date": "2018-08-24",
-          "quantity": 29
-        },
-        {
-          "date": "2018-08-25",
-          "quantity": 26,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-08-26",
-          "quantity": 19,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-08-27",
-          "quantity": 24
-        },
-        {
-          "date": "2018-08-28",
-          "quantity": 29,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-08-29",
-          "quantity": 26
-        },
-        {
-          "date": "2018-08-30",
-          "quantity": 2,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-08-31",
-          "quantity": 24
-        },
-        {
-          "date": "2018-09-01",
-          "quantity": 12
-        },
-        {
-          "date": "2018-09-02",
-          "quantity": 29
-        },
-        {
-          "date": "2018-09-03",
-          "quantity": 27,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-09-04",
-          "quantity": 26,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-05",
-          "quantity": 26
-        },
-        {
-          "date": "2018-09-06",
-          "quantity": 29
-        },
-        {
-          "date": "2018-09-07",
-          "quantity": 3
-        },
-        {
-          "date": "2018-09-08",
-          "quantity": 8
-        },
-        {
-          "date": "2018-09-09",
-          "quantity": 10,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-10",
-          "quantity": 21,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-11",
-          "quantity": 8
-        },
-        {
-          "date": "2018-09-12",
-          "quantity": 13
-        },
-        {
-          "date": "2018-09-13",
-          "quantity": 12
-        },
-        {
-          "date": "2018-09-14",
-          "quantity": 24,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-15",
-          "quantity": 13,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-16",
-          "quantity": 22
-        },
-        {
-          "date": "2018-09-17",
-          "quantity": 21,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-09-18",
-          "quantity": 12
-        }
-      ],
-      "extra-view": [
-        {
-          "date": "2018-08-21",
-          "quantity": 26,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-08-22",
-          "quantity": 17,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-08-23",
-          "quantity": 5
-        },
-        {
-          "date": "2018-08-24",
-          "quantity": 9
-        },
-        {
-          "date": "2018-08-25",
-          "quantity": 6
-        },
-        {
-          "date": "2018-08-26",
-          "quantity": 2
-        },
-        {
-          "date": "2018-08-27",
-          "quantity": 26
-        },
-        {
-          "date": "2018-08-28",
-          "quantity": 22,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-08-29",
-          "quantity": 21,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-08-30",
-          "quantity": 3
-        },
-        {
-          "date": "2018-08-31",
-          "quantity": 20,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-09-01",
-          "quantity": 20,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-02",
-          "quantity": 8
-        },
-        {
-          "date": "2018-09-03",
-          "quantity": 3,
-          "restrictions": {
-            "noArrival": true
-          }
-        },
-        {
-          "date": "2018-09-04",
-          "quantity": 14
-        },
-        {
-          "date": "2018-09-05",
-          "quantity": 28
-        },
-        {
-          "date": "2018-09-06",
-          "quantity": 14,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-07",
-          "quantity": 5,
-          "restrictions": {
-            "noDeparture": true
-          }
-        },
-        {
-          "date": "2018-09-08",
-          "quantity": 1
-        },
-        {
-          "date": "2018-09-09",
-          "quantity": 14
-        },
-        {
-          "date": "2018-09-10",
-          "quantity": 2
-        },
-        {
-          "date": "2018-09-11",
-          "quantity": 2
-        },
-        {
-          "date": "2018-09-12",
-          "quantity": 28
-        }
-      ]
-    }
+    "roomTypes": [
+      {
+        "date": "2018-08-21",
+        "quantity": 12,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-22",
+        "quantity": 20,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-23",
+        "quantity": 22,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-24",
+        "quantity": 13,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-25",
+        "quantity": 19,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-26",
+        "quantity": 24,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-27",
+        "quantity": 8,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-28",
+        "quantity": 9,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-29",
+        "quantity": 23,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-30",
+        "quantity": 13,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-31",
+        "quantity": 19,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-01",
+        "quantity": 4,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-02",
+        "quantity": 19,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-03",
+        "quantity": 12,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-04",
+        "quantity": 19,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-05",
+        "quantity": 20,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-06",
+        "quantity": 10,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-07",
+        "quantity": 28,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-08",
+        "quantity": 15,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-09",
+        "quantity": 27,
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-10",
+        "quantity": 17,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-09-11",
+        "quantity": 16,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "single-room"
+      },
+      {
+        "date": "2018-08-21",
+        "quantity": 11,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-22",
+        "quantity": 3,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-23",
+        "quantity": 5,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-24",
+        "quantity": 29,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-25",
+        "quantity": 26,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-26",
+        "quantity": 19,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-27",
+        "quantity": 24,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-28",
+        "quantity": 29,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-29",
+        "quantity": 26,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-30",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-31",
+        "quantity": 24,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-01",
+        "quantity": 12,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-02",
+        "quantity": 29,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-03",
+        "quantity": 27,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-04",
+        "quantity": 26,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-05",
+        "quantity": 26,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-06",
+        "quantity": 29,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-07",
+        "quantity": 3,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-08",
+        "quantity": 8,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-09",
+        "quantity": 10,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-10",
+        "quantity": 21,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-11",
+        "quantity": 8,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-12",
+        "quantity": 13,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-13",
+        "quantity": 12,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-14",
+        "quantity": 24,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-15",
+        "quantity": 13,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-16",
+        "quantity": 22,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-17",
+        "quantity": 21,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-09-18",
+        "quantity": 12,
+        "roomTypeId": "twin-bed"
+      },
+      {
+        "date": "2018-08-21",
+        "quantity": 26,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-22",
+        "quantity": 17,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-23",
+        "quantity": 5,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-24",
+        "quantity": 9,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-25",
+        "quantity": 6,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-26",
+        "quantity": 2,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-27",
+        "quantity": 26,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-28",
+        "quantity": 22,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-29",
+        "quantity": 21,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-30",
+        "quantity": 3,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-08-31",
+        "quantity": 20,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-01",
+        "quantity": 20,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-02",
+        "quantity": 8,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-03",
+        "quantity": 3,
+        "restrictions": {
+          "noArrival": true
+        },
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-04",
+        "quantity": 14,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-05",
+        "quantity": 28,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-06",
+        "quantity": 14,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-07",
+        "quantity": 5,
+        "restrictions": {
+          "noDeparture": true
+        },
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-08",
+        "quantity": 1,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-09",
+        "quantity": 14,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-10",
+        "quantity": 2,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-11",
+        "quantity": 2,
+        "roomTypeId": "extra-view"
+      },
+      {
+        "date": "2018-09-12",
+        "quantity": 28,
+        "roomTypeId": "extra-view"
+      }
+    ]
   }
 }
