@@ -47,7 +47,7 @@ for (let imagePath of imagePaths) {
 function generateRoomType () {
   const min = Chance.natural({ min: 1, max: 4 });
   return {
-    'id': Chance.natural({ min: 1, max: 9999 }),
+    'id': Chance.string({ pool: 'abcdefghijklmnopqrstvwuxyz', length: 8 }),
     'name': Chance.sentence({ words: Chance.natural({ min: 2, max: 3 }) }),
     'description': Chance.paragraph(),
     'totalQuantity': Chance.natural({ min: 1, max: 20 }),
@@ -118,7 +118,7 @@ function generateDescription () {
   };
 
   for (let i = 0; i < Chance.natural({ min: 1, max: 10 }); i++) {
-    description.roomTypes[Chance.string()] = generateRoomType();
+    description.roomTypes[i] = generateRoomType();
   }
   return description;
 }
@@ -144,7 +144,7 @@ function generateRatePlan (roomTypeId, occupancy) {
   endDateTrav.setDate((new Date()).getDate() + Chance.natural({ min: 30, max: 365 }));
 
   return {
-    'id': Chance.natural({ min: 1, max: 9999 }),
+    'id': Chance.string({ pool: 'abcdefghijklmnopqrstvwuxyz', length: 8 }),
     'name': Chance.sentence({ words: Chance.natural({ min: 1, max: 4 }) }),
     'description': Chance.paragraph(),
     'currency': 'RON',
@@ -202,7 +202,7 @@ function generateAvailability (description) {
     for (let i = 0; i < Chance.natural({ min: 90, max: 365}); i++) {
       startDate.setDate(startDate.getDate() + 1);
       let dailyAvailability = {
-        roomTypeId: Chance.natural({ min: 1, max: 9999 }),
+        roomTypeId: roomTypeId,
         date: `${startDate.getFullYear()}-${('0' + (startDate.getMonth()+1)).slice(-2)}-${('0' + startDate.getDate()).slice(-2)}`,
         quantity: Chance.natural({ min: 0, max: description.roomTypes[roomTypeId].totalQuantity}),
       };
