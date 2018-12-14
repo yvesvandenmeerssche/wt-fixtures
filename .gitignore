@@ -2,3 +2,4 @@ node_modules
 scripts/utils/swarm_data
 scripts/package-lock.json
 data/generated
+.idea/
