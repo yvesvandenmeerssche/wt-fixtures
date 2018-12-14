@@ -84,6 +84,7 @@ async function regenerateTimeBasedData (hotelPath, what) {
   if (!hotelData) {
     throw new Error(`${hotelPath} contains broken definition.json`);
   }
+  let ratePlans;
   switch (what) {
     case 'availability':
       hotelData.availability = generators.generateAvailability(hotelData.description);
@@ -92,12 +93,20 @@ async function regenerateTimeBasedData (hotelPath, what) {
       hotelData.description.cancellationPolicies = generators.generateCancellationPolicies();
       break;
     case 'ratePlans':
-      hotelData.ratePlans = generators.generateRatePlans(hotelData.description);
+      ratePlans = generators.generateRatePlans(hotelData.description, hotelData.ratePlans.length);
+      hotelData.ratePlans = hotelData.ratePlans.map((rp, i) => {
+        const {id, description, name, modifiers, ...rest } = ratePlans[i];
+        return Object.assign({}, rp, rest);
+      });
       break;
     case 'all':
       hotelData.availability = generators.generateAvailability(hotelData.description);
       hotelData.description.cancellationPolicies = generators.generateCancellationPolicies();
-      hotelData.ratePlans = generators.generateRatePlans(hotelData.description);
+      ratePlans = generators.generateRatePlans(hotelData.description, hotelData.ratePlans.length);
+      hotelData.ratePlans = hotelData.ratePlans.map((rp, i) => {
+        const {id, description, name, modifiers, ...rest } = ratePlans[i];
+        return Object.assign({}, rp, rest);
+      });
       break;
   }
   

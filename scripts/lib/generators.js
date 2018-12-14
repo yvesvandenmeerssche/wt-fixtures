@@ -181,30 +181,28 @@ function generateRatePlan (roomTypeId, occupancy) {
   };
 }
 
-function generateRatePlans (description) {
+function generateRatePlans (description, quantity) {
   const ratePlans = [],
-    roomTypeIds = Object.keys(description.roomTypes);
-  for (let roomTypeId of roomTypeIds) {
-    for (let i = 0; i < Chance.natural({ min: 1, max: 4 }); i++) {
-      const occupancy = description.roomTypes[roomTypeId].occupancy;
-      ratePlans.push(generateRatePlan(roomTypeId, occupancy));
+    limit = quantity || Chance.natural({ min: 1, max: 4 });
+  for (let j = 0; j < description.roomTypes.length; j++) {
+    for (let i = 0; i < limit; i++) {
+      ratePlans.push(generateRatePlan(description.roomTypes[j].id, description.roomTypes[j].occupancy));
     }
   }
   return ratePlans;
 }
 
 function generateAvailability (description) {
-  const availability = [],
-    roomTypeIds = Object.keys(description.roomTypes);
-  for (let roomTypeId of roomTypeIds) {
+  const availability = [];
+  for (let j = 0; j < description.roomTypes.length; j++) {
     let startDate = new Date();
     startDate.setMonth(startDate.getMonth() - 1);
     for (let i = 0; i < Chance.natural({ min: 90, max: 365}); i++) {
       startDate.setDate(startDate.getDate() + 1);
       let dailyAvailability = {
-        roomTypeId: roomTypeId,
+        roomTypeId: description.roomTypes[j].id,
         date: `${startDate.getFullYear()}-${('0' + (startDate.getMonth()+1)).slice(-2)}-${('0' + startDate.getDate()).slice(-2)}`,
-        quantity: Chance.natural({ min: 0, max: description.roomTypes[roomTypeId].totalQuantity}),
+        quantity: Chance.natural({ min: 0, max: description.roomTypes[j].totalQuantity}),
       };
       if (Chance.bool()) {
         dailyAvailability['restrictions'] = {};

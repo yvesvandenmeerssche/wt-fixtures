@@ -75,9 +75,15 @@
     "defaultCancellationAmount": 0,
     "cancellationPolicies": [
       {
-        "from": "2018-01-01",
-        "to": "2019-12-31",
-        "deadline": 14,
+        "from": "2018-12-01",
+        "to": "2019-02-24",
+        "deadline": 3,
+        "amount": 96
+      },
+      {
+        "from": "2018-12-01",
+        "to": "2019-02-24",
+        "deadline": 21,
         "amount": 50
       }
     ]
@@ -87,423 +93,1506 @@
       "name": "Four-bed shared room (2018)",
       "description": "Price per person per night for the four bed shared room. Cleaning fee not included.",
       "currency": "RON",
-      "price": 40,
+      "price": 112,
       "roomTypeIds": [
         "shared-room-4"
       ],
       "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-12-31"
+        "from": "2018-12-01",
+        "to": "2019-07-02"
       },
       "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-12-31"
+        "from": "2018-12-01",
+        "to": "2019-11-27"
       },
-      "id": "shared-room-4-2018"
+      "id": "shared-room-4-2018",
+      "restrictions": {}
     },
     {
       "name": "Twelve-bed shared room (2018)",
       "description": "Price per person per night for the twelve bed shared room. Cleaning fee not included.",
       "currency": "RON",
-      "price": 26,
+      "price": 274,
       "roomTypeIds": [
-        "shared-room-12"
+        "shared-room-4"
       ],
       "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-12-31"
+        "from": "2018-12-01",
+        "to": "2019-10-08"
       },
       "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-12-31"
+        "from": "2018-12-01",
+        "to": "2019-07-09"
       },
-      "id": "shared-room-12-2018"
+      "id": "shared-room-12-2018",
+      "restrictions": {
+        "bookingCutOff": {
+          "min": 2,
+          "max": 69
+        },
+        "lengthOfStay": {
+          "min": 5,
+          "max": 56
+        }
+      }
     },
     {
       "name": "Four-bed shared room (2019)",
       "description": "Price per person per night for the four bed shared room. Cleaning fee not included.",
       "currency": "RON",
-      "price": 42,
+      "price": 392,
       "roomTypeIds": [
         "shared-room-4"
       ],
       "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2019-12-31"
+        "from": "2018-12-01",
+        "to": "2019-11-18"
       },
       "availableForTravel": {
-        "from": "2019-01-01",
-        "to": "2019-12-31"
+        "from": "2018-12-01",
+        "to": "2019-10-24"
       },
-      "id": "shared-room-4-2019"
+      "id": "shared-room-4-2019",
+      "restrictions": {
+        "lengthOfStay": {
+          "min": 2,
+          "max": 21
+        },
+        "bookingCutOff": {
+          "min": 7,
+          "max": 82
+        }
+      }
     },
     {
       "name": "Twelve-bed shared room (2019)",
       "description": "Price per person per night for the twelve bed shared room. Cleaning fee not included.",
       "currency": "RON",
-      "price": 27,
+      "price": 297,
       "roomTypeIds": [
-        "shared-room-12"
+        "shared-room-4"
       ],
       "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2019-12-31"
+        "from": "2018-12-01",
+        "to": "2019-11-03"
       },
       "availableForTravel": {
-        "from": "2019-01-01",
-        "to": "2019-12-31"
+        "from": "2018-12-01",
+        "to": "2019-03-28"
       },
-      "id": "shared-room-12-2019"
+      "id": "shared-room-12-2019",
+      "restrictions": {}
     }
   ],
   "availability": {
     "roomTypes": [
       {
-        "date": "2018-08-21",
-        "quantity": 4,
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-15",
+        "quantity": 48,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-08-22",
-        "quantity": 9,
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-16",
+        "quantity": 14,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-08-23",
-        "quantity": 30,
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-17",
+        "quantity": 32,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-08-24",
-        "quantity": 15,
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-18",
+        "quantity": 29,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-19",
+        "quantity": 59,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-08-25",
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-20",
+        "quantity": 58,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-21",
+        "quantity": 64
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-22",
+        "quantity": 40,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-23",
+        "quantity": 64,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-24",
+        "quantity": 57
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-25",
+        "quantity": 12
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-26",
+        "quantity": 38,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-27",
+        "quantity": 23
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-28",
+        "quantity": 6
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-29",
+        "quantity": 23,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-11-30",
+        "quantity": 31
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-01",
+        "quantity": 16,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-02",
+        "quantity": 59,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-03",
+        "quantity": 43
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-04",
+        "quantity": 37,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-05",
+        "quantity": 39,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-06",
+        "quantity": 14
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-07",
+        "quantity": 8,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-08",
+        "quantity": 25
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-09",
         "quantity": 23,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-08-26",
-        "quantity": 11,
-        "roomTypeId": "shared-room-4"
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-10",
+        "quantity": 2
       },
       {
-        "date": "2018-08-27",
-        "quantity": 16,
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-11",
+        "quantity": 24,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-08-28",
-        "quantity": 5,
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-12",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-13",
+        "quantity": 55,
         "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "shared-room-4"
+          "noArrival": true
+        }
       },
       {
-        "date": "2018-08-29",
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-14",
+        "quantity": 36
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-15",
         "quantity": 27,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-08-30",
-        "quantity": 13,
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-16",
+        "quantity": 21
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-17",
+        "quantity": 26,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-08-31",
-        "quantity": 22,
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-18",
+        "quantity": 36
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-19",
+        "quantity": 40,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-09-01",
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-20",
+        "quantity": 19
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-21",
+        "quantity": 39,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-22",
+        "quantity": 35
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-23",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-24",
+        "quantity": 60,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-25",
+        "quantity": 14
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-26",
+        "quantity": 9
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-27",
+        "quantity": 59
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-28",
+        "quantity": 38
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-29",
+        "quantity": 59
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-30",
+        "quantity": 26,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2018-12-31",
+        "quantity": 32
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-01",
+        "quantity": 30
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-02",
+        "quantity": 27
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-03",
+        "quantity": 59
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-04",
+        "quantity": 61
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-05",
+        "quantity": 41,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-06",
+        "quantity": 27
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-07",
+        "quantity": 60,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-08",
+        "quantity": 51
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-09",
+        "quantity": 40,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-10",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-11",
+        "quantity": 43,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-12",
+        "quantity": 27,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-13",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-14",
+        "quantity": 57
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-15",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-16",
+        "quantity": 57
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-17",
+        "quantity": 10
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-18",
+        "quantity": 64
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-19",
+        "quantity": 9,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-20",
+        "quantity": 12
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-21",
+        "quantity": 9
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-22",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-23",
+        "quantity": 53,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-24",
+        "quantity": 15
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-25",
+        "quantity": 52
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-26",
+        "quantity": 22
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-27",
+        "quantity": 37
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-28",
+        "quantity": 53
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-29",
+        "quantity": 39
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-30",
+        "quantity": 15,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-01-31",
+        "quantity": 58
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-01",
+        "quantity": 9,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-02",
+        "quantity": 38,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-03",
+        "quantity": 35
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-04",
+        "quantity": 21,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-05",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-06",
+        "quantity": 14
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-07",
+        "quantity": 12,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-08",
+        "quantity": 42
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-09",
+        "quantity": 44
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-10",
+        "quantity": 52,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-11",
+        "quantity": 46,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-12",
+        "quantity": 38,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-13",
+        "quantity": 7
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-14",
+        "quantity": 13
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-15",
+        "quantity": 18,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-16",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-17",
+        "quantity": 28,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-18",
+        "quantity": 7,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-19",
+        "quantity": 32,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-20",
+        "quantity": 24,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-21",
+        "quantity": 23,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-4",
+        "date": "2019-02-22",
+        "quantity": 35,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-15",
+        "quantity": 48
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-16",
+        "quantity": 31
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-17",
         "quantity": 24,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-09-02",
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-18",
+        "quantity": 23
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-19",
+        "quantity": 27,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-20",
+        "quantity": 37
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-21",
+        "quantity": 16,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-22",
+        "quantity": 23,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-23",
+        "quantity": 5,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-24",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-25",
+        "quantity": 15
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-26",
+        "quantity": 7
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-27",
+        "quantity": 27,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-28",
         "quantity": 12,
-        "roomTypeId": "shared-room-4"
+        "restrictions": {
+          "noDeparture": true
+        }
       },
       {
-        "date": "2018-09-03",
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-29",
+        "quantity": 25
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-11-30",
+        "quantity": 45,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-01",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-02",
+        "quantity": 30
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-03",
+        "quantity": 32
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-04",
+        "quantity": 14
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-05",
+        "quantity": 29,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-06",
+        "quantity": 21,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-07",
+        "quantity": 40
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-08",
+        "quantity": 39
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-09",
+        "quantity": 41
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-10",
+        "quantity": 32,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-11",
+        "quantity": 32,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-12",
+        "quantity": 6
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-13",
+        "quantity": 47
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-14",
+        "quantity": 45
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-15",
+        "quantity": 13,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-16",
+        "quantity": 25,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-17",
+        "quantity": 30
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-18",
+        "quantity": 24,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-19",
+        "quantity": 27
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-20",
+        "quantity": 13
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-21",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-22",
+        "quantity": 37
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-23",
+        "quantity": 45
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-24",
+        "quantity": 10,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-25",
+        "quantity": 47,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-26",
+        "quantity": 14,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-27",
+        "quantity": 11,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-28",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-29",
+        "quantity": 41
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-30",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2018-12-31",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-01",
+        "quantity": 39
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-02",
+        "quantity": 27,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-03",
+        "quantity": 8,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-04",
+        "quantity": 16,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-05",
+        "quantity": 36
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-06",
+        "quantity": 45,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-07",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-08",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-09",
+        "quantity": 48
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-10",
+        "quantity": 10
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-11",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-12",
+        "quantity": 36
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-13",
+        "quantity": 30
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-14",
+        "quantity": 12
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-15",
+        "quantity": 32,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-16",
+        "quantity": 40
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-17",
+        "quantity": 37
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-18",
+        "quantity": 46
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-19",
+        "quantity": 10,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-20",
+        "quantity": 44
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-21",
+        "quantity": 16,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-22",
+        "quantity": 29
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-23",
+        "quantity": 33
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-24",
+        "quantity": 28,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-25",
+        "quantity": 48
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-26",
+        "quantity": 17,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-27",
+        "quantity": 4,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-28",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-29",
+        "quantity": 42
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-30",
+        "quantity": 35,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-01-31",
         "quantity": 19,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-09-04",
-        "quantity": 9,
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-01",
+        "quantity": 36
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-02",
+        "quantity": 47,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-09-05",
-        "quantity": 1,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
-      },
-      {
-        "date": "2018-09-06",
-        "quantity": 18,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
-      },
-      {
-        "date": "2018-09-07",
-        "quantity": 14,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "shared-room-4"
-      },
-      {
-        "date": "2018-09-08",
-        "quantity": 24,
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-03",
+        "quantity": 46,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-09-09",
-        "quantity": 10,
-        "roomTypeId": "shared-room-4"
-      },
-      {
-        "date": "2018-09-10",
-        "quantity": 21,
-        "roomTypeId": "shared-room-4"
-      },
-      {
-        "date": "2018-09-11",
-        "quantity": 20,
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-04",
+        "quantity": 36,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-4"
+        }
       },
       {
-        "date": "2018-08-21",
-        "quantity": 12,
-        "roomTypeId": "shared-room-12"
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-05",
+        "quantity": 23,
+        "restrictions": {
+          "noArrival": true
+        }
       },
       {
-        "date": "2018-08-22",
-        "quantity": 30,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-08-23",
-        "quantity": 4,
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-06",
+        "quantity": 7,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-12"
+        }
       },
       {
-        "date": "2018-08-24",
-        "quantity": 4,
-        "roomTypeId": "shared-room-12"
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-07",
+        "quantity": 43
       },
       {
-        "date": "2018-08-25",
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-08",
+        "quantity": 14
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-09",
+        "quantity": 21
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-10",
+        "quantity": 23
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-11",
+        "quantity": 27
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-12",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-13",
+        "quantity": 28
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-14",
         "quantity": 8,
         "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-15",
+        "quantity": 6
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-16",
+        "quantity": 36
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-17",
+        "quantity": 45
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-18",
+        "quantity": 39,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-19",
+        "quantity": 29
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-20",
+        "quantity": 35,
+        "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-12"
+        }
       },
       {
-        "date": "2018-08-26",
-        "quantity": 10,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-08-27",
-        "quantity": 11,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-08-28",
-        "quantity": 25,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-08-29",
-        "quantity": 21,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-08-30",
-        "quantity": 1,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-08-31",
-        "quantity": 25,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-01",
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-21",
         "quantity": 3,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-02",
-        "quantity": 9,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-12"
+        }
       },
       {
-        "date": "2018-09-03",
-        "quantity": 9,
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-22",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-23",
+        "quantity": 5
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-24",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-25",
+        "quantity": 44,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-12"
+        }
       },
       {
-        "date": "2018-09-04",
-        "quantity": 6,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-05",
-        "quantity": 2,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-06",
-        "quantity": 18,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-07",
-        "quantity": 25,
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-26",
+        "quantity": 47,
         "restrictions": {
           "noArrival": true
-        },
-        "roomTypeId": "shared-room-12"
+        }
       },
       {
-        "date": "2018-09-08",
-        "quantity": 2,
-        "roomTypeId": "shared-room-12"
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-27",
+        "quantity": 4
       },
       {
-        "date": "2018-09-09",
-        "quantity": 9,
-        "roomTypeId": "shared-room-12"
+        "roomTypeId": "shared-room-12",
+        "date": "2019-02-28",
+        "quantity": 48,
+        "restrictions": {
+          "noArrival": true
+        }
       },
       {
-        "date": "2018-09-10",
-        "quantity": 8,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-11",
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-01",
         "quantity": 13,
         "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "shared-room-12"
+          "noArrival": true
+        }
       },
       {
-        "date": "2018-09-12",
-        "quantity": 11,
-        "roomTypeId": "shared-room-12"
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-02",
+        "quantity": 32
       },
       {
-        "date": "2018-09-13",
-        "quantity": 29,
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-03",
+        "quantity": 45
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-04",
+        "quantity": 15
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-05",
+        "quantity": 34,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-06",
+        "quantity": 21
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-07",
+        "quantity": 7
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-08",
+        "quantity": 10,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-09",
+        "quantity": 40,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-10",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-11",
+        "quantity": 12
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-12",
+        "quantity": 40
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-13",
+        "quantity": 48,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-14",
+        "quantity": 12
+      },
+      {
+        "roomTypeId": "shared-room-12",
+        "date": "2019-03-15",
+        "quantity": 1,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-14",
-        "quantity": 12,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-15",
-        "quantity": 14,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-16",
-        "quantity": 2,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-17",
-        "quantity": 3,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-18",
-        "quantity": 7,
-        "roomTypeId": "shared-room-12"
-      },
-      {
-        "date": "2018-09-19",
-        "quantity": 8,
-        "roomTypeId": "shared-room-12"
+        }
       }
     ]
   }

@@ -11,7 +11,7 @@ function preprocessHotel (data, images) {
   const swarm = config.SWARM_PROVIDER,
     convert = (x) => `${swarm.method}://${swarm.host}:${swarm.port}/bzz-raw:/${images[x]}`;
   data.description.images = data.description.images.map(convert);
-  for (let roomType of data.roomTypes) {
+  for (let roomType of data.description.roomTypes) {
     roomType.images = roomType.images.map(convert);
   }
   if (config.WT_NOTIFICATION_API) {

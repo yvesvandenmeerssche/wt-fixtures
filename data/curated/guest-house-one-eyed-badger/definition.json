@@ -107,16 +107,10 @@
     "defaultCancellationAmount": 0,
     "cancellationPolicies": [
       {
-        "from": "2018-01-01",
-        "to": "2018-12-31",
-        "deadline": 30,
-        "amount": 30
-      },
-      {
-        "from": "2018-01-01",
-        "to": "2018-12-31",
-        "deadline": 7,
-        "amount": 60
+        "from": "2018-12-01",
+        "to": "2019-07-28",
+        "deadline": 12,
+        "amount": 98
       }
     ]
   },
@@ -125,17 +119,17 @@
       "name": "Single room",
       "description": "Price per night for a standard single room.",
       "currency": "RON",
-      "price": 184,
+      "price": 158,
       "roomTypeIds": [
         "single-room"
       ],
       "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-12-01"
+        "from": "2018-12-01",
+        "to": "2019-07-01"
       },
       "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-12-16"
+        "from": "2018-12-01",
+        "to": "2019-05-13"
       },
       "modifiers": [
         {
@@ -145,23 +139,29 @@
           }
         }
       ],
-      "id": "single-room"
+      "id": "single-room",
+      "restrictions": {
+        "lengthOfStay": {
+          "min": 7,
+          "max": 20
+        }
+      }
     },
     {
       "name": "Twin bed",
       "description": "Price per person per night for a twin bed room.",
       "currency": "RON",
-      "price": 204,
+      "price": 257,
       "roomTypeIds": [
-        "twin-bed"
+        "single-room"
       ],
       "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-12-01"
+        "from": "2018-12-01",
+        "to": "2019-04-14"
       },
       "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-12-16"
+        "from": "2018-12-01",
+        "to": "2019-07-20"
       },
       "modifiers": [
         {
@@ -184,23 +184,29 @@
           }
         }
       ],
-      "id": "twin-bed"
+      "id": "twin-bed",
+      "restrictions": {
+        "lengthOfStay": {
+          "min": 4,
+          "max": 57
+        }
+      }
     },
     {
       "name": "Extra view",
       "description": "Price for the room with an extra view and a balcony.",
       "currency": "RON",
-      "price": 274,
+      "price": 151,
       "roomTypeIds": [
-        "extra-view"
+        "single-room"
       ],
       "availableForReservation": {
-        "from": "2018-01-01",
-        "to": "2018-12-01"
+        "from": "2018-12-01",
+        "to": "2019-09-29"
       },
       "availableForTravel": {
-        "from": "2018-01-01",
-        "to": "2018-12-16"
+        "from": "2018-12-01",
+        "to": "2019-09-01"
       },
       "modifiers": [
         {
@@ -210,470 +216,2076 @@
           }
         }
       ],
-      "id": "extra-view"
+      "id": "extra-view",
+      "restrictions": {
+        "bookingCutOff": {
+          "min": 2,
+          "max": 23
+        }
+      }
     }
   ],
   "availability": {
     "roomTypes": [
       {
-        "date": "2018-08-21",
-        "quantity": 12,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-22",
-        "quantity": 20,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-23",
-        "quantity": 22,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-24",
-        "quantity": 13,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-25",
-        "quantity": 19,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-26",
-        "quantity": 24,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-27",
-        "quantity": 8,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-28",
-        "quantity": 9,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-29",
-        "quantity": 23,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-30",
-        "quantity": 13,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-31",
-        "quantity": 19,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-09-01",
+        "roomTypeId": "single-room",
+        "date": "2018-11-15",
         "quantity": 4,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-09-02",
-        "quantity": 19,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-09-03",
-        "quantity": 12,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-09-04",
-        "quantity": 19,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-09-05",
-        "quantity": 20,
         "restrictions": {
           "noDeparture": true
-        },
-        "roomTypeId": "single-room"
+        }
       },
       {
-        "date": "2018-09-06",
-        "quantity": 10,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "single-room"
+        "roomTypeId": "single-room",
+        "date": "2018-11-16",
+        "quantity": 6
       },
       {
-        "date": "2018-09-07",
-        "quantity": 28,
-        "roomTypeId": "single-room"
+        "roomTypeId": "single-room",
+        "date": "2018-11-17",
+        "quantity": 8
       },
       {
-        "date": "2018-09-08",
-        "quantity": 15,
-        "roomTypeId": "single-room"
+        "roomTypeId": "single-room",
+        "date": "2018-11-18",
+        "quantity": 7
       },
       {
-        "date": "2018-09-09",
-        "quantity": 27,
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-09-10",
-        "quantity": 17,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-09-11",
-        "quantity": 16,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "single-room"
-      },
-      {
-        "date": "2018-08-21",
-        "quantity": 11,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-22",
-        "quantity": 3,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-23",
-        "quantity": 5,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-24",
-        "quantity": 29,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-25",
-        "quantity": 26,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-26",
-        "quantity": 19,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-27",
-        "quantity": 24,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-28",
-        "quantity": 29,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-29",
-        "quantity": 26,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-30",
-        "quantity": 2,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-31",
-        "quantity": 24,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-01",
-        "quantity": 12,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-02",
-        "quantity": 29,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-03",
-        "quantity": 27,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-04",
-        "quantity": 26,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-05",
-        "quantity": 26,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-06",
-        "quantity": 29,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-07",
-        "quantity": 3,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-08",
-        "quantity": 8,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-09",
-        "quantity": 10,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-10",
-        "quantity": 21,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-11",
-        "quantity": 8,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-12",
-        "quantity": 13,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-13",
-        "quantity": 12,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-14",
-        "quantity": 24,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-15",
-        "quantity": 13,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-16",
-        "quantity": 22,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-17",
-        "quantity": 21,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-09-18",
-        "quantity": 12,
-        "roomTypeId": "twin-bed"
-      },
-      {
-        "date": "2018-08-21",
-        "quantity": 26,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-22",
-        "quantity": 17,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-23",
-        "quantity": 5,
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-24",
-        "quantity": 9,
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-25",
-        "quantity": 6,
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-26",
-        "quantity": 2,
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-27",
-        "quantity": 26,
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-28",
-        "quantity": 22,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-29",
-        "quantity": 21,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-30",
-        "quantity": 3,
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-08-31",
-        "quantity": 20,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-09-01",
-        "quantity": 20,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-09-02",
-        "quantity": 8,
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-09-03",
-        "quantity": 3,
-        "restrictions": {
-          "noArrival": true
-        },
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-09-04",
-        "quantity": 14,
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-09-05",
-        "quantity": 28,
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-09-06",
-        "quantity": 14,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-09-07",
-        "quantity": 5,
-        "restrictions": {
-          "noDeparture": true
-        },
-        "roomTypeId": "extra-view"
-      },
-      {
-        "date": "2018-09-08",
+        "roomTypeId": "single-room",
+        "date": "2018-11-19",
         "quantity": 1,
-        "roomTypeId": "extra-view"
+        "restrictions": {
+          "noDeparture": true
+        }
       },
       {
-        "date": "2018-09-09",
-        "quantity": 14,
-        "roomTypeId": "extra-view"
+        "roomTypeId": "single-room",
+        "date": "2018-11-20",
+        "quantity": 4
       },
       {
-        "date": "2018-09-10",
+        "roomTypeId": "single-room",
+        "date": "2018-11-21",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-11-22",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-11-23",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-11-24",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-11-25",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-11-26",
+        "quantity": 5
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-11-27",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-11-28",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-11-29",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-11-30",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-01",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-02",
+        "quantity": 6,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-03",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-04",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-05",
+        "quantity": 7
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-06",
+        "quantity": 6,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-07",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-08",
+        "quantity": 6
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-09",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-10",
+        "quantity": 5,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-11",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-12",
         "quantity": 2,
-        "roomTypeId": "extra-view"
+        "restrictions": {
+          "noDeparture": true
+        }
       },
       {
-        "date": "2018-09-11",
+        "roomTypeId": "single-room",
+        "date": "2018-12-13",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-14",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-15",
+        "quantity": 8,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-16",
+        "quantity": 7,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-17",
         "quantity": 2,
-        "roomTypeId": "extra-view"
+        "restrictions": {
+          "noDeparture": true
+        }
       },
       {
-        "date": "2018-09-12",
-        "quantity": 28,
-        "roomTypeId": "extra-view"
+        "roomTypeId": "single-room",
+        "date": "2018-12-18",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-19",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-20",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-21",
+        "quantity": 6
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-22",
+        "quantity": 5
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-23",
+        "quantity": 6,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-24",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-25",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-26",
+        "quantity": 7,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-27",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-28",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-29",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-30",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2018-12-31",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-01",
+        "quantity": 6
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-02",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-03",
+        "quantity": 8,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-04",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-05",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-06",
+        "quantity": 7,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-07",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-08",
+        "quantity": 7,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-09",
+        "quantity": 6,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-10",
+        "quantity": 6
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-11",
+        "quantity": 6
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-12",
+        "quantity": 7
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-13",
+        "quantity": 5
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-14",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-15",
+        "quantity": 5
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-16",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-17",
+        "quantity": 7,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-18",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-19",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-20",
+        "quantity": 3,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-21",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-22",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-23",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-24",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-25",
+        "quantity": 8,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-26",
+        "quantity": 6,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-27",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-28",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-29",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-30",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-01-31",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-01",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-02",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-03",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-04",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-05",
+        "quantity": 5
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-06",
+        "quantity": 8
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-07",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-08",
+        "quantity": 6,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-09",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-10",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-11",
+        "quantity": 7,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-12",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-13",
+        "quantity": 5,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-14",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-15",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-16",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-17",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-18",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-19",
+        "quantity": 3,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-20",
+        "quantity": 7
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-21",
+        "quantity": 7
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-22",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-23",
+        "quantity": 8,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-24",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-25",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-26",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "single-room",
+        "date": "2019-02-27",
+        "quantity": 8,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-15",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-16",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-17",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-18",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-19",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-20",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-21",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-22",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-23",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-24",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-25",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-26",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-27",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-28",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-29",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-11-30",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-01",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-02",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-03",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-04",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-05",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-06",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-07",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-08",
+        "quantity": 3,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-09",
+        "quantity": 3,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-10",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-11",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-12",
+        "quantity": 4,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-13",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-14",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-15",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-16",
+        "quantity": 0,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-17",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-18",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-19",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-20",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-21",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-22",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-23",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-24",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-25",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-26",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-27",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-28",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-29",
+        "quantity": 3,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-30",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2018-12-31",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-01",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-02",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-03",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-04",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-05",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-06",
+        "quantity": 4,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-07",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-08",
+        "quantity": 3,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-09",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-10",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-11",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-12",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-13",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-14",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-15",
+        "quantity": 0,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-16",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-17",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-18",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-19",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-20",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-21",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-22",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-23",
+        "quantity": 0,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-24",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-25",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-26",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-27",
+        "quantity": 3,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-28",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-29",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-30",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-01-31",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-01",
+        "quantity": 3,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-02",
+        "quantity": 4,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-03",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-04",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-05",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-06",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-07",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-08",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-09",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-10",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-11",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-12",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-13",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-14",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-15",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-16",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-17",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-18",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-19",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-20",
+        "quantity": 4
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-21",
+        "quantity": 3
+      },
+      {
+        "roomTypeId": "twin-bed",
+        "date": "2019-02-22",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-15",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-16",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-17",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-18",
+        "quantity": 0,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-19",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-20",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-21",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-22",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-23",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-24",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-25",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-26",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-27",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-28",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-29",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-11-30",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-01",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-02",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-03",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-04",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-05",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-06",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-07",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-08",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-09",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-10",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-11",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-12",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-13",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-14",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-15",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-16",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-17",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-18",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-19",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-20",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-21",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-22",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-23",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-24",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-25",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-26",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-27",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-28",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-29",
+        "quantity": 0,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-30",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2018-12-31",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-01",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-02",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-03",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-04",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-05",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-06",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-07",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-08",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-09",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-10",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-11",
+        "quantity": 0,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-12",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-13",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-14",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-15",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-16",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-17",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-18",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-19",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-20",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-21",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-22",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-23",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-24",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-25",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-26",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-27",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-28",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-29",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-30",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-01-31",
+        "quantity": 0,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-01",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-02",
+        "quantity": 0,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-03",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-04",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-05",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-06",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-07",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-08",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-09",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-10",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-11",
+        "quantity": 0,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-12",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-13",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-14",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-15",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-16",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-17",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-18",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-19",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-20",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-21",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-22",
+        "quantity": 2
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-23",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-24",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-25",
+        "quantity": 1,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-26",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-27",
+        "quantity": 1,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-02-28",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-03-01",
+        "quantity": 0
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-03-02",
+        "quantity": 2,
+        "restrictions": {
+          "noDeparture": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-03-03",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-03-04",
+        "quantity": 1
+      },
+      {
+        "roomTypeId": "extra-view",
+        "date": "2019-03-05",
+        "quantity": 2,
+        "restrictions": {
+          "noArrival": true
+        }
       }
     ]
   }
